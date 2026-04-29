@@ -1,0 +1,24 @@
+{
+  "name": "ai-augmented_second_brain",
+  "version": "1.0.0",
+  "description": "This script generates a `manifest.json` file from the `AI-Augmented-Vault` folder.",
+  "main": "generate-manifest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/My-Knowledge-Garden/AI-Augmented-Vault.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/My-Knowledge-Garden/AI-Augmented-Vault/issues"
+  },
+  "homepage": "https://github.com/My-Knowledge-Garden/AI-Augmented-Vault#readme",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

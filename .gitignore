@@ -1,0 +1,82 @@
+# Node.js dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Icon
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Linux
+*~
+.nfs*
+
+# Android
+.gradle/
+/local.properties
+/.idea/
+*.iml
+.gradle/
+
+# VS Code
+.vscode/
+.history/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.swn
+
+# Generated files
+manifest.json
+
+# Python virtualenv
+venv/
+.venv/
+ENV/
+env/
+
+# Ignore system-specific swap and backup files
+*.bak
+*.old
+*.orig
+
+# Ignore macOS Finder metadata
+.AppleDB
+.AppleDesktop
+
+# Ignore lock files for alternative package managers
+pnpm-lock.yaml
+yarn.lock
+
+# Ignore IDE files
+.idea/
+*.sublime-workspace
+*.sublime-project
