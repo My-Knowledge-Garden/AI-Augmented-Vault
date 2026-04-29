@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>لوحة التحكم</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <button class="menu-button" aria-label="فتح القائمة الجانبية" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header-title">
+        <p>لوحة التحكم</p>
+        <small>نظام إدارة المحتوى</small>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <h2>القائمة الجانبية</h2>
+        <div id="accordion-container"></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="dashboard-grid">
+        <article class="card" id="card-creative">
+          <div class="card-head">
+            <h3>Creative Production</h3>
+            <span class="card-date">آخر نشاط</span>
+          </div>
+          <p>الإنتاج الإبداعي</p>
+          <div class="card-progress">
+            <div class="card-progress-fill"></div>
+          </div>
+        </article>
+        <article class="card" id="card-radical">
+          <div class="card-head">
+            <h3>Radical Discourse</h3>
+            <span class="card-date">آخر نشاط</span>
+          </div>
+          <p>الخطاب الراديكالي</p>
+          <div class="card-progress">
+            <div class="card-progress-fill"></div>
+          </div>
+        </article>
+        <article class="card" id="card-tech">
+          <div class="card-head">
+            <h3>Practical Tech</h3>
+            <span class="card-date">آخر نشاط</span>
+          </div>
+          <p>التقنية العملية</p>
+          <div class="card-progress">
+            <div class="card-progress-fill"></div>
+          </div>
+        </article>
+        <article class="card" id="card-knowledge">
+          <div class="card-head">
+            <h3>Knowledge Management</h3>
+            <span class="card-date">آخر نشاط</span>
+          </div>
+          <p>إدارة المعرفة</p>
+          <div class="card-progress">
+            <div class="card-progress-fill"></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="log-feed" class="log-feed">
+        <div class="daily-group">
+          <div class="daily-group-header">
+            <h2>29 أبريل 2026</h2>
+            <span>مجموعة يومية</span>
+          </div>
+          <article class="log-item">
+            <div class="log-item-meta">
+              <span class="log-category">Creative Production / Audio Generation</span>
+              <div class="log-progress-small">
+                <div class="log-progress-fill"></div>
+              </div>
+            </div>
+            <div class="log-markdown">
+              <p>بدء إعداد قالب المحتوى مع هيكلية الأقسام والملاحظات الأساسية.</p>
+            </div>
+            <div class="log-tags">
+              <span>#إنتاج</span>
+              <span>#تصميم</span>
+              <span>#تخطيط</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('sidebar-open');
+    });
+  </script>
+</body>
+</html>
