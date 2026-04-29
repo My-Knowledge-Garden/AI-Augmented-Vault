@@ -22,6 +22,7 @@
 
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-inner">
+        <button class="sidebar-close-btn" id="sidebar-close" aria-label="إغلاق القائمة">إغلاق</button>
         <h2>القائمة الجانبية</h2>
         <div id="accordion-container"></div>
       </div>
@@ -70,6 +71,11 @@
           </div>
         </article>
       </section>
+
+      <div id="filter-indicator" style="display: none;" class="filter-indicator">
+        <span>عرض سجلات:</span>
+      </div>
+      <button id="showAllBtn" style="display: none;" class="show-all-btn">عرض الجميع</button>
 
       <section id="log-feed" class="log-feed">
         <div class="daily-group">

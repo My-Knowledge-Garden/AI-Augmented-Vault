@@ -1,6 +1,9 @@
 const sidebarToggle = document.getElementById('menu-toggle');
+const sidebarClose = document.getElementById('sidebar-close');
 const sidebar = document.getElementById('sidebar');
 const logFeed = document.getElementById('log-feed');
+
+const dashboardGrid = document.querySelector('.dashboard-grid');
 
 const cardConfigs = [
   {
@@ -20,6 +23,12 @@ const cardConfigs = [
     parentMatchers: ['Knowledge Management', 'إدارة المعرفة']
   }
 ];
+
+let appState = {
+  allData: [],
+  currentFilter: null,
+  filterLabel: null
+};
 
 function showError(message) {
   if (!logFeed) return;
@@ -199,11 +208,125 @@ function setupSidebarToggle() {
   });
 }
 
+function setupSidebarClose() {
+  if (!sidebarClose || !sidebar) return;
+  sidebarClose.addEventListener('click', () => {
+    sidebar.classList.remove('sidebar-open');
+  });
+}
+
+function buildTree(data) {
+  const tree = {};
+  data.forEach(item => {
+    const parent = item.parent || 'غير مصنف';
+    const category = item.category || 'غير محدد';
+    if (!tree[parent]) tree[parent] = {};
+    if (!tree[category]) tree[parent][category] = [];
+    tree[parent][category].push({
+      title: item.title,
+      filePath: item.filePath,
+      progress: item.progress,
+      parent: item.parent,
+      category: item.category,
+      ...item
+    });
+  });
+  return tree;
+}
+
+function stripEnglishLabel(value) {
+  if (typeof value !== 'string') return value;
+  const arabicSegments = value.match(/[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF0-9\s]+/g);
+  if (arabicSegments) {
+    const joined = arabicSegments.join('').trim();
+    if (joined.length) return joined;
+  }
+  const match = value.match(/\(([^)]+)\)$/);
+  if (match && match[1]) return match[1].trim();
+  return value;
+}
+
+function renderAccordion(tree) {
+  const container = document.getElementById('accordion-container');
+  if (!container) return;
+  container.innerHTML = '';
+  Object.entries(tree).forEach(([parent, categories]) => {
+    const parentDetails = document.createElement('details');
+    parentDetails.className = 'accordion-parent';
+    const parentSummary = document.createElement('summary');
+    parentSummary.className = 'accordion-summary-1';
+    parentSummary.textContent = stripEnglishLabel(parent);
+    parentDetails.appendChild(parentSummary);
+    Object.entries(categories).forEach(([category, items]) => {
+      const categoryDetails = document.createElement('details');
+      categoryDetails.className = 'accordion-category';
+      const categorySummary = document.createElement('summary');
+      categorySummary.className = 'accordion-summary-2';
+      categorySummary.textContent = stripEnglishLabel(category);
+      categoryDetails.appendChild(categorySummary);
+      items.forEach(item => {
+        const itemBtn = document.createElement('button');
+        itemBtn.className = 'accordion-item';
+        itemBtn.textContent = stripEnglishLabel(item.title);
+        itemBtn.dataset.parent = item.parent;
+        itemBtn.dataset.category = item.category;
+        itemBtn.addEventListener('click', () => {
+          filterDashboard({
+            parent: item.parent,
+            category: item.category
+          });
+        });
+        categoryDetails.appendChild(itemBtn);
+      });
+      parentDetails.appendChild(categoryDetails);
+    });
+    container.appendChild(parentDetails);
+  });
+}
+
+function filterDashboard(path) {
+  if (!path || !path.parent || !path.category) return;
+  const filtered = appState.allData.filter(item =>
+    item.parent === path.parent && item.category === path.category
+  );
+  appState.currentFilter = path;
+  appState.filterLabel = `${stripEnglishLabel(path.parent)} › ${stripEnglishLabel(path.category)}`;
+  if (dashboardGrid) dashboardGrid.style.display = 'none';
+  const filterIndicator = document.getElementById('filter-indicator');
+  if (filterIndicator) {
+    filterIndicator.style.display = 'block';
+    filterIndicator.textContent = `عرض سجلات: ${appState.filterLabel}`;
+  }
+  const showAllBtn = document.getElementById('showAllBtn');
+  if (showAllBtn) showAllBtn.style.display = 'inline-block';
+  renderDailyLogs(filtered);
+  if (sidebar) sidebar.classList.remove('sidebar-open');
+}
+
+function resetFilter() {
+  appState.currentFilter = null;
+  appState.filterLabel = null;
+  if (dashboardGrid) dashboardGrid.style.display = 'grid';
+  const filterIndicator = document.getElementById('filter-indicator');
+  if (filterIndicator) filterIndicator.style.display = 'none';
+  const showAllBtn = document.getElementById('showAllBtn');
+  if (showAllBtn) showAllBtn.style.display = 'none';
+  renderDailyLogs(appState.allData);
+}
+
 async function init() {
   setupSidebarToggle();
+  setupSidebarClose();
   const data = await fetchManifest();
+  appState.allData = data;
   updateCards(data);
   renderDailyLogs(data);
+  const tree = buildTree(data);
+  renderAccordion(tree);
+  const showAllBtn = document.getElementById('showAllBtn');
+  if (showAllBtn) {
+    showAllBtn.addEventListener('click', resetFilter);
+  }
 }
 
 init();
