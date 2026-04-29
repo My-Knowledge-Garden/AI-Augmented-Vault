@@ -2,6 +2,7 @@ const sidebarToggle = document.getElementById('menu-toggle');
 const sidebarClose = document.getElementById('sidebar-close');
 const sidebar = document.getElementById('sidebar');
 const logFeed = document.getElementById('log-feed');
+const weeklySummary = document.getElementById('weekly-summary');
 
 const dashboardGrid = document.querySelector('.dashboard-grid');
 
@@ -201,6 +202,88 @@ function renderDailyLogs(data) {
   });
 }
 
+function calculateWeeklyStats(data) {
+  if (!Array.isArray(data) || !data.length) {
+    return { total: 0, distribution: {}, topParent: null, topPercentage: 0 };
+  }
+
+  const now = new Date();
+  const endDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+  const startDate = new Date(endDate);
+  startDate.setDate(endDate.getDate() - 6);
+
+  const weeklyItems = data.filter(item => {
+    const itemDate = parseDate(item.date);
+    return itemDate && itemDate.getTime() >= startDate.getTime() && itemDate.getTime() <= endDate.getTime();
+  });
+
+  const distribution = weeklyItems.reduce((acc, item) => {
+    const parent = item.parent || 'غير مصنف';
+    acc[parent] = (acc[parent] || 0) + 1;
+    return acc;
+  }, {});
+
+  const total = Object.values(distribution).reduce((sum, count) => sum + count, 0);
+  const sortedParents = Object.entries(distribution).sort((a, b) => b[1] - a[1]);
+  const topParent = sortedParents.length ? sortedParents[0][0] : null;
+  const topPercentage = total ? Math.round((sortedParents[0][1] / total) * 100) : 0;
+  const percentDistribution = {};
+
+  Object.entries(distribution).forEach(([parent, count]) => {
+    percentDistribution[parent] = {
+      count,
+      percentage: total ? Math.round((count / total) * 100) : 0
+    };
+  });
+
+  return {
+    total,
+    distribution: percentDistribution,
+    topParent,
+    topPercentage
+  };
+}
+
+function renderWeeklySummary(stats) {
+  if (!weeklySummary) return;
+
+  if (!stats || !stats.total) {
+    weeklySummary.innerHTML = `
+      <div class="summary-card empty-summary">
+        <h2>حصيلة الأسبوع</h2>
+        <p>لا توجد نشاطات خلال الأيام السبعة الماضية.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const barsHtml = Object.entries(stats.distribution).map(([parent, info]) => {
+    return `
+      <div class="summary-row">
+        <div class="summary-row-header">
+          <span class="summary-parent">${stripEnglishLabel(parent)}</span>
+          <span class="summary-count">${info.count}</span>
+        </div>
+        <div class="summary-bar">
+          <div class="summary-bar-fill" style="width: ${info.percentage}%;"></div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  weeklySummary.innerHTML = `
+    <div class="summary-card">
+      <div class="summary-title">
+        <h2>حصيلة الأسبوع</h2>
+      </div>
+      <p class="summary-text">هذا الأسبوع، تركز نشاطك الأكبر على ${stripEnglishLabel(stats.topParent)} بنسبة ${stats.topPercentage}%.</p>
+      <div class="summary-bars">
+        ${barsHtml}
+      </div>
+    </div>
+  `;
+}
+
 function setupSidebarToggle() {
   if (!sidebarToggle || !sidebar) return;
   sidebarToggle.addEventListener('click', () => {
@@ -292,6 +375,7 @@ function filterDashboard(path) {
   appState.currentFilter = path;
   appState.filterLabel = `${stripEnglishLabel(path.parent)} › ${stripEnglishLabel(path.category)}`;
   if (dashboardGrid) dashboardGrid.style.display = 'none';
+  if (weeklySummary) weeklySummary.style.display = 'none';
   const filterIndicator = document.getElementById('filter-indicator');
   if (filterIndicator) {
     filterIndicator.style.display = 'block';
@@ -307,6 +391,7 @@ function resetFilter() {
   appState.currentFilter = null;
   appState.filterLabel = null;
   if (dashboardGrid) dashboardGrid.style.display = 'grid';
+  if (weeklySummary) weeklySummary.style.display = 'block';
   const filterIndicator = document.getElementById('filter-indicator');
   if (filterIndicator) filterIndicator.style.display = 'none';
   const showAllBtn = document.getElementById('showAllBtn');
@@ -320,6 +405,8 @@ async function init() {
   const data = await fetchManifest();
   appState.allData = data;
   updateCards(data);
+  const stats = calculateWeeklyStats(data);
+  renderWeeklySummary(stats);
   renderDailyLogs(data);
   const tree = buildTree(data);
   renderAccordion(tree);
