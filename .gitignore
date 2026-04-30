@@ -10,6 +10,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Generated build output
+# docs/
+src/
+
 # OS files
 .DS_Store
 Thumbs.db

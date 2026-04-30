@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start | AI-Augmented Documentation</title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">AI-Augmented Vault</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="search-input" class="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <!-- Left sidebar (breadcrumb/mobile nav) -->
+            <nav class="breadcrumb-nav">
+                <ul class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+<li><a href="/arabic-documentation/index.html">Arabic Documentation</a></li>
+<li><a href="/arabic-documentation/overview/index.html">Overview</a></li>
+<li class="current">Quick Start</li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <article class="content-article">
+                    <header class="article-header">
+                        <h1>Quick Start</h1>
+                        
+                        <div class="article-meta">
+                            <span class="date"></span>
+                            
+                            <div class="tags">
+                                
+                                <span class="tag"></span>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </header>
+
+                    
+
+                    <div class="content-body">
+                        <p>هذا الدليل يساعدك على الابتداء فوراً مع مشروع قبو الذكاء الاصطناعي المعزز دون الحاجة إلى تفاصيل تقنية معقدة.</p>
+<hr>
+<ul>
+<li>متصفح ويب حديث (Chrome, Firefox, Safari, Edge)</li>
+<li>محرر نصوص (VS Code, Sublime Text, إلخ)</li>
+<li>اختياري: Node.js للميزات المتقدمة</li>
+</ul>
+<pre><code class="language-bash"># انسخ المشروع إلى جهازك
+git clone https://github.com/My-Knowledge-Garden/AI-Augmented-Vault.git
+
+# انتقل إلى مجلد المشروع
+cd AI-Augmented-Vault
+
+# ثبّت المكتبات المطلوبة (اختياري)
+npm install
+</code></pre>
+<hr>
+<ol>
+<li><p><strong>افتح الملف الرئيسي</strong></p>
+<ul>
+<li>انقر على <code>index.html</code> وافتحه في متصفحك</li>
+<li>ستظهر واجهة تفاعلية لاستكشاف المحتوى</li>
+</ul>
+</li>
+<li><p><strong>تصفح الفئات الأربع</strong></p>
+<ul>
+<li>🎨 <strong>الإنتاج الإبداعي</strong>: للموسيقى والفيديو والتصميم</li>
+<li>💭 <strong>الخطاب الجذري</strong>: للكتابة التحليلية والفلسفة</li>
+<li>🔧 <strong>الحلول التقنية</strong>: للبرمجيات والإصلاحات</li>
+<li>📚 <strong>إدارة المعرفة</strong>: لنظم التعلم</li>
+</ul>
+</li>
+</ol>
+<p>ابدأ بـ <code>categories.md</code> للحصول على قائمة شاملة منظمة</p>
+<hr>
+<ul>
+<li>ابدأ من: <code>AI-Augmented-Vault/1-creative-production/audio-generation/</code></li>
+<li>اقرأ: <code>songwriting.md</code> أو <code>ai-music.md</code></li>
+</ul>
+<ul>
+<li>ابدأ من: <code>AI-Augmented-Vault/1-creative-production/visual-arts/</code></li>
+<li>اقرأ: <code>video-creation.md</code> أو <code>3d-design.md</code></li>
+</ul>
+<ul>
+<li>ابدأ من: <code>AI-Augmented-Vault/2-radical-discourse/</code></li>
+<li>اقرأ: <code>political-economic-critique.md</code> أو <code>philosophical-framework.md</code></li>
+</ul>
+<ul>
+<li>ابدأ من: <code>AI-Augmented-Vault/3-practical-tech/software-building/</code></li>
+<li>اقرأ: <code>ai-development.md</code> أو <code>automation-scripts.md</code></li>
+</ul>
+<ul>
+<li>ابدأ من: <code>AI-Augmented-Vault/3-practical-tech/maintenance/</code></li>
+<li>اقرأ: <code>hardware-repair.md</code> أو <code>home-repairs.md</code></li>
+</ul>
+<ul>
+<li>ابدأ من: <code>AI-Augmented-Vault/4-knowledge-management/</code></li>
+<li>اقرأ: <code>second-brain.md</code> أو <code>knowledge-tree.md</code></li>
+</ul>
+<hr>
+<p>إذا كنت تريد إنشاء ملف <code>manifest.json</code> (قائمة شاملة بكل المحتوى):</p>
+<pre><code class="language-bash"># ثبّت المكتبة المطلوبة
+npm install gray-matter
+
+# شغّل السكريبت
+node generate-manifest.js
+
+# سيتم إنشاء manifest.json تلقائياً
+</code></pre>
+<hr>
+<p>لا تحاول قراءة كل شيء دفعة واحدة. ركز على موضوع واحد أولاً وسِر من هناك.</p>
+<p>كل ملف يحتوي على روابط إلى ملفات ذات صلة. استخدمها للتعمق أكثر.</p>
+<p>الفرغ ملاحظاتك الخاصة وأضفها إلى الملفات (إذا كنت تعمل نسختك الخاصة).</p>
+<p>المحتوى يتطور باستمرار. تحقق من التحديثات الجديدة بشكل دوري.</p>
+<p>إذا وجدت خطأ أو لديك اقتراح، شارك ملاحظاتك عبر GitHub Issues.</p>
+<hr>
+<pre><code>قبو الذكاء الاصطناعي المعزز
+│
+├─── 1-creative-production (🎨 إنتاج إبداعي)
+│    ├── audio-generation (🎵 توليد صوت)
+│    │   ├── songwriting
+│    │   └── ai-music
+│    └── visual-arts (🎬 فنون بصرية)
+│        ├── video-creation
+│        └── 3d-design
+│
+├─── 2-radical-discourse (💭 خطاب جذري)
+│    ├── analytical-writing (✍️ كتابة تحليلية)
+│    │   ├── political-economic-critique
+│    │   └── religious-analysis
+│    └── philosophical-framework (🧠 إطار فلسفي)
+│        ├── radical-perspectives
+│        └── realistic-philosophy
+│
+├─── 3-practical-tech (🔧 حلول تقنية)
+│    ├── software-building (💻 تطوير البرمجيات)
+│    │   ├── ai-development
+│    │   ├── automation-scripts
+│    │   └── simple-web-pages
+│    └── maintenance (🔧 الصيانة)
+│        ├── hardware-repair
+│        ├── home-repairs
+│        └── appliance-fixes
+│
+└─── 4-knowledge-management (📚 إدارة المعرفة)
+     ├── experimental-infrastructure (🧪 بنية تجريبية)
+     │   ├── knowledge-tree
+     │   └── second-brain
+     └── information-synthesis (📊 تجميع معلومات)
+         └── trial-error-structuring
+</code></pre>
+<hr>
+<p>بعد إكمال البدء السريع، يمكنك:</p>
+<ol>
+<li>✅ <strong>قراءة التوثيق الكامل</strong>: ارجع إلى <code>table-of-contents.md</code></li>
+<li>✅ <strong>استكشاف أدلة متخصصة</strong>: في مجلد <code>guides/</code> </li>
+<li>✅ <strong>تعلم أفضل الممارسات</strong>: في <code>best-practices.md</code></li>
+<li>✅ <strong>حل مشاكل شائعة</strong>: في <code>troubleshooting.md</code></li>
+<li>✅ <strong>المساهمة في المشروع</strong>: قم بإرسال تحسينات عبر GitHub</li>
+</ol>
+<hr>
+<p>راجع <code>troubleshooting.md</code> للحصول على حلول للمشاكل الشائعة، أو تواصل مع المجتمع على GitHub.</p>
+<p><strong>هل أنت جاهز؟ اختر موضوعك وابدأ الآن!</strong> 🚀</p>
+<hr>
+<p><strong>آخر تحديث</strong>: 30 أبريل 2026</p>
+
+                    </div>
+
+                    
+                </article>
+            </main>
+
+            <!-- Right Sidebar Navigation -->
+            <aside class="sidebar-nav" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h3>Navigation</h3>
+                    <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar">×</button>
+                </div>
+                <nav class="nav-tree" id="nav-tree">
+                    <!-- Populated by JavaScript -->
+                    <div class="nav-loading">Loading navigation...</div>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Sidebar overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/nav-tree.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script>
+        // Initialize navigation tree for this page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = '/arabic-documentation/overview/quick-start.html';
+            initializeNavTree(currentPath);
+            initializeSearch();
+        });
+    </script>
+</body>
+</html>

@@ -4,6 +4,9 @@
   "description": "This script generates a `manifest.json` file from the `AI-Augmented-Vault` folder.",
   "main": "generate-manifest.js",
   "scripts": {
+    "build": "node build-site.js",
+    "dev": "node dev-server.js",
+    "verify-links": "node verify-links.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +22,11 @@
   },
   "homepage": "https://github.com/My-Knowledge-Garden/AI-Augmented-Vault#readme",
   "dependencies": {
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "marked": "^11.1.1",
+    "highlight.js": "^11.9.0",
+    "cheerio": "^1.0.0-rc.12",
+    "chokidar": "^3.5.3",
+    "express": "^4.18.2"
   }
 }

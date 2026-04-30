@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Augmented Documentation Hub</title>
+    <meta name="description" content="Welcome to the AI-Augmented Vault - A comprehensive knowledge management system covering creative production, radical discourse, practical tech, and knowledge management.">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">AI-Augmented Vault</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="search-input" class="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <!-- Main Content -->
+            <main class="main-content homepage">
+                <section class="hero-section">
+                    <h1 class="hero-title">Knowledge Hub</h1>
+                    <p class="hero-subtitle">Navigate your AI-Augmented Vault across four dimensions of knowledge</p>
+                </section>
+
+                <section class="categories-grid">
+                    <article class="category-card" data-category="creative-production">
+                        <div class="card-header">
+                            <h2>🎨 Creative Production</h2>
+                        </div>
+                        <div class="card-content">
+                            <p>Explore AI-assisted creative tools and techniques for audio generation, songwriting, visual arts, 3D design, and video creation.</p>
+                            <ul class="card-links">
+                                <li><a href="/arabic-documentation/creative-production/ai-music.html">AI Music & Songwriting</a></li>
+                                <li><a href="/arabic-documentation/creative-production/visual-arts.html">Visual Arts & Design</a></li>
+                                <li><a href="/arabic-documentation/creative-production/video-creation.html">Video Creation</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/categories/creative-production.html" class="btn btn-secondary">View All →</a>
+                        </div>
+                    </article>
+
+                    <article class="category-card" data-category="radical-discourse">
+                        <div class="card-header">
+                            <h2>💭 Radical Discourse</h2>
+                        </div>
+                        <div class="card-content">
+                            <p>Dive into analytical writing, philosophical frameworks, political-economic critique, and religious analysis.</p>
+                            <ul class="card-links">
+                                <li><a href="/arabic-documentation/radical-discourse/philosophical-framework.html">Philosophical Framework</a></li>
+                                <li><a href="/arabic-documentation/radical-discourse/political-economic-critique.html">Political-Economic Critique</a></li>
+                                <li><a href="/arabic-documentation/radical-discourse/religious-analysis.html">Religious Analysis</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/categories/radical-discourse.html" class="btn btn-secondary">View All →</a>
+                        </div>
+                    </article>
+
+                    <article class="category-card" data-category="practical-tech">
+                        <div class="card-header">
+                            <h2>⚙️ Practical Tech</h2>
+                        </div>
+                        <div class="card-content">
+                            <p>Master practical technology skills including AI development, automation, maintenance, and simple web pages.</p>
+                            <ul class="card-links">
+                                <li><a href="/arabic-documentation/practical-tech/ai-development.html">AI Development</a></li>
+                                <li><a href="/arabic-documentation/practical-tech/automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="/arabic-documentation/practical-tech/maintenance.html">Maintenance & Repairs</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/categories/practical-tech.html" class="btn btn-secondary">View All →</a>
+                        </div>
+                    </article>
+
+                    <article class="category-card" data-category="knowledge-management">
+                        <div class="card-header">
+                            <h2>🧠 Knowledge Management</h2>
+                        </div>
+                        <div class="card-content">
+                            <p>Organize your knowledge using experimental infrastructure, information synthesis, and knowledge tree structures.</p>
+                            <ul class="card-links">
+                                <li><a href="/arabic-documentation/knowledge-management/knowledge-tree.html">Knowledge Tree</a></li>
+                                <li><a href="/arabic-documentation/knowledge-management/second-brain.html">Second Brain</a></li>
+                                <li><a href="/arabic-documentation/knowledge-management/information-synthesis.html">Information Synthesis</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/categories/knowledge-management.html" class="btn btn-secondary">View All →</a>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="featured-section">
+                    <h2>Recent & Featured</h2>
+                    <div class="featured-grid">
+                        <div id="featured-content">
+                            <!-- Populated by JavaScript -->
+                            <p class="loading">Loading featured content...</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Right Sidebar Navigation -->
+            <aside class="sidebar-nav" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h3>Navigation</h3>
+                    <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar">×</button>
+                </div>
+                <nav class="nav-tree" id="nav-tree">
+                    <!-- Populated by JavaScript -->
+                    <div class="nav-loading">Loading navigation...</div>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Sidebar overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/nav-tree.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeNavTree('/');
+            initializeSearch();
+            loadFeaturedContent();
+        });
+
+        function loadFeaturedContent() {
+            // This will fetch the search index and display recent/featured pages
+            fetch('/search-index.json')
+                .then(r => r.json())
+                .then(data => {
+                    if (data && data.length > 0) {
+                        const featured = data.slice(0, 6); // Get first 6
+                        const html = featured.map(item => `
+                            <article class="featured-card">
+                                <h3><a href="${item.url}">${item.title}</a></h3>
+                                <p>${item.description}</p>
+                                <p class="featured-meta">${item.category}</p>
+                            </article>
+                        `).join('');
+                        document.getElementById('featured-content').innerHTML = html;
+                    }
+                })
+                .catch(err => {
+                    console.error('Error loading featured content:', err);
+                    document.getElementById('featured-content').innerHTML = '<p>Unable to load featured content</p>';
+                });
+        }
+    </script>
+</body>
+</html>

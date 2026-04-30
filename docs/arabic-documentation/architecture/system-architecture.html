@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Architecture | AI-Augmented Documentation</title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">AI-Augmented Vault</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="search-input" class="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <!-- Left sidebar (breadcrumb/mobile nav) -->
+            <nav class="breadcrumb-nav">
+                <ul class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+<li><a href="/arabic-documentation/index.html">Arabic Documentation</a></li>
+<li><a href="/arabic-documentation/architecture/index.html">Architecture</a></li>
+<li class="current">System Architecture</li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <article class="content-article">
+                    <header class="article-header">
+                        <h1>System Architecture</h1>
+                        
+                        <div class="article-meta">
+                            <span class="date"></span>
+                            
+                            <div class="tags">
+                                
+                                <span class="tag"></span>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </header>
+
+                    
+
+                    <div class="content-body">
+                        <p>هذا الملف يشرح البنية المعمارية الكاملة للمشروع والمكونات الأساسية.</p>
+<hr>
+<p>المشروع مبني على ثلاثة مبادئ أساسية:</p>
+<ol>
+<li><strong>التنظيم الهرمي</strong>: تنظيم المحتوى في فئات وأقسام واضحة</li>
+<li><strong>القابلية للتوسع</strong>: إمكانية إضافة محتوى وميزات جديدة بسهولة</li>
+<li><strong>سهولة الوصول</strong>: واجهة سهلة التصفح واستخراج البيانات الآلي</li>
+</ol>
+<pre><code>┌─────────────────────────────────────────────────────────┐
+│          طبقة المستخدم (User Layer)                    │
+│  index.html + script.js + style.css (الواجهة)          │
+└──────────────────┬──────────────────────────────────────┘
+                   │
+┌──────────────────▼──────────────────────────────────────┐
+│      طبقة البيانات (Data Layer)                        │
+│  manifest.json + Front Matter في ملفات Markdown       │
+└──────────────────┬──────────────────────────────────────┘
+                   │
+┌──────────────────▼──────────────────────────────────────┐
+│     طبقة المحتوى (Content Layer)                       │
+│  AI-Augmented-Vault/ مع 4 فئات رئيسية                 │
+└─────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<p><strong>الملفات:</strong></p>
+<ul>
+<li><code>index.html</code> - الهيكل الأساسي</li>
+<li><code>script.js</code> - المنطق والتفاعل</li>
+<li><code>style.css</code> - التنسيق والمظهر</li>
+</ul>
+<p><strong>الوظائف:</strong></p>
+<ul>
+<li>عرض المحتوى بطريقة منظمة</li>
+<li>البحث والتصفية</li>
+<li>التنقل بين الفئات</li>
+<li>دعم الجوال (Responsive)</li>
+</ul>
+<p><strong>الملفات:</strong></p>
+<ul>
+<li><code>manifest.json</code> - قاموس شامل لكل المحتوى</li>
+<li><code>generate-manifest.js</code> - سكريبت لإنشاء البيانات الوصفية</li>
+</ul>
+<p><strong>الوظائف:</strong></p>
+<ul>
+<li>فهرسة كاملة للمحتوى</li>
+<li>استخراج معلومات من Front Matter</li>
+<li>تحديث تلقائي للتغييرات</li>
+</ul>
+<p><strong>المجلد الرئيسي:</strong> <code>AI-Augmented-Vault/</code></p>
+<p><strong>الفئات الأربع:</strong></p>
+<ol>
+<li><code>1-creative-production/</code> - الإنتاج الإبداعي</li>
+<li><code>2-radical-discourse/</code> - الخطاب الجذري</li>
+<li><code>3-practical-tech/</code> - الحلول التقنية</li>
+<li><code>4-knowledge-management/</code> - إدارة المعرفة</li>
+</ol>
+<p><strong>الملفات:</strong></p>
+<ul>
+<li><code>build_vault.py</code> - أداة بناء وصيانة القبو</li>
+<li><code>categories.md</code> - قائمة الفئات</li>
+</ul>
+<hr>
+<pre><code class="language-json">{
+  &quot;content&quot;: [
+    {
+      &quot;id&quot;: &quot;unique-id&quot;,
+      &quot;title&quot;: &quot;عنوان الملف&quot;,
+      &quot;description&quot;: &quot;وصف قصير&quot;,
+      &quot;category&quot;: &quot;1-creative-production&quot;,
+      &quot;tags&quot;: [&quot;tag1&quot;, &quot;tag2&quot;],
+      &quot;public&quot;: true,
+      &quot;author&quot;: &quot;اسم المؤلف&quot;,
+      &quot;date&quot;: &quot;2026-04-30&quot;,
+      &quot;filePath&quot;: &quot;path/to/file.md&quot;,
+      &quot;wordCount&quot;: 1500,
+      &quot;readingTime&quot;: 5
+    }
+  ]
+}
+</code></pre>
+<pre><code class="language-yaml">---
+title: عنوان الملف
+description: وصف قصير يشرح محتوى الملف
+category: اسم الفئة
+tags: [tag1, tag2, tag3]
+public: true
+author: اسم المؤلف
+date: 2026-04-30
+updated: 2026-04-30
+difficulty: intermediate
+duration: 5
+---
+</code></pre>
+<pre><code>مستوى 1: الفئات الرئيسية (1, 2, 3, 4)
+├── مستوى 2: الأقسام الفرعية
+│   └── مستوى 3: المواضيع
+│       └── مستوى 4: الملفات (أقصى عمق)
+</code></pre>
+<hr>
+<pre><code>المستخدم يفتح الموقع
+    ↓
+index.html يحمّل script.js + style.css
+    ↓
+script.js يحمّل manifest.json
+    ↓
+البيانات تُعرض في الواجهة
+    ↓
+المستخدم يختار محتوى
+    ↓
+ملف Markdown يُحمّل
+    ↓
+المحتوى يُعرض للمستخدم
+</code></pre>
+<pre><code>إضافة ملف Markdown جديد
+    ↓
+إضافة Front Matter
+    ↓
+تشغيل: node generate-manifest.js
+    ↓
+manifest.json يُحدّث
+    ↓
+الواجهة تُحدّث تلقائياً
+    ↓
+المحتوى الجديد يظهر
+</code></pre>
+<hr>
+<pre><code>Frontend:
+├── HTML5 (الهيكل)
+├── CSS3 (التنسيق + دعم RTL)
+└── Vanilla JavaScript (المنطق)
+
+Backend/Build:
+├── Node.js (بيئة التشغيل)
+├── npm (إدارة الحزم)
+├── gray-matter (قراءة Markdown)
+└── Python (أدوات إضافية)
+
+Data:
+├── Markdown (تنسيق المحتوى)
+├── JSON (البيانات الوصفية)
+└── YAML (Front Matter)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>المكتبة</th>
+<th>الإصدار</th>
+<th>الوظيفة</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>gray-matter</td>
+<td>4.0.3</td>
+<td>استخراج Front Matter</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>(يمكن إضافة مكتبات أخرى)</td>
+</tr>
+</tbody></table>
+<hr>
+<pre><code class="language-javascript">// generate-manifest.js
+1. البحث عن جميع ملفات .md في AI-Augmented-Vault
+2. قراءة Front Matter من كل ملف
+3. التحقق من الحقول المطلوبة (public: true)
+4. فرز البيانات حسب الفئة والترتيب
+5. إنشاء manifest.json
+6. إغلاق البرنامج بنجاح
+</code></pre>
+<pre><code class="language-javascript">// script.js
+1. حمّل manifest.json عند فتح الصفحة
+2. نظّم البيانات حسب الفئات
+3. أنشئ عناصر HTML ديناميكياً
+4. طبّق CSS التنسيق
+5. أضف مستمعي الأحداث (Event Listeners)
+6. فعّل البحث والتصفية
+7. اعرض النتائج
+</code></pre>
+<hr>
+<pre><code>المحتوى المنشور (public: true)
+    ↓
+يظهر في manifest.json
+    ↓
+يظهر في الواجهة
+</code></pre>
+<pre><code>المحتوى الخاص (public: false)
+    ↓
+لا يظهر في manifest.json
+    ↓
+متوفر محلياً فقط
+</code></pre>
+<hr>
+<pre><code>Frontend:
+├── لا توجد بيانات حساسة مكشوفة
+├── كل البيانات من الملفات الثابتة
+└── لا توجد اتصالات خادم مباشرة
+
+File System:
+├── .gitignore لحماية الملفات الحساسة
+├── حقوق قراءة/كتابة محدودة
+└── نسخ احتياطية منتظمة
+</code></pre>
+<pre><code>✓ لا تخزين كلمات مرور
+✓ لا تتبع المستخدمين
+✓ لا إعلانات
+✓ محتوى موثوق
+</code></pre>
+<hr>
+<p>إضافة محتوى جديد بسيطة جداً:</p>
+<pre><code>1. أنشئ ملف .md جديد في المجلد الصحيح
+2. أضف Front Matter الصحيح
+3. اكتب المحتوى
+4. شغّل: node generate-manifest.js
+5. النتيجة: تحديث تلقائي
+</code></pre>
+<pre><code>يمكن توسيع المشروع بـ:
+├── مكونات واجهة جديدة
+├── خوارزميات بحث متقدمة
+├── دعم لغات جديدة
+├── نظام تصنيف متقدم
+└── ميزات تعاون
+</code></pre>
+<hr>
+<pre><code>Lazy Loading:
+├── تحميل المحتوى عند الحاجة فقط
+└── تحسين سرعة التحميل الأولي
+
+Caching:
+├── حفظ manifest.json محلياً
+└── تقليل طلبات الشبكة
+
+Compression:
+├── ضغط CSS و JavaScript
+└── تقليل حجم الملفات
+</code></pre>
+<pre><code class="language-bash"># استخدم أدوات مطور المتصفح
+Chrome DevTools → Performance
+Firefox DevTools → Performance
+Safari Develop → Timelines
+</code></pre>
+<hr>
+<pre><code class="language-bash"># اختبار الواجهة
+npm run test
+
+# اختبار الأداء
+npm run benchmark
+
+# فحص الجودة
+npm run lint
+</code></pre>
+<pre><code>مراقبة دورية:
+├── حجم manifest.json
+├── عدد الملفات
+├── جودة Front Matter
+└── الأخطاء المحتملة
+</code></pre>
+<hr>
+<pre><code>يومي:
+├── التحقق من الأخطاء في وحدة التحكم
+
+أسبوعي:
+├── تحديث manifest.json
+├── مراجعة المحتوى الجديد
+└── اختبار الروابط
+
+شهري:
+├── نسخة احتياطية كاملة
+├── تحديث المكتبات
+└── مراجعة الأداء
+</code></pre>
+<pre><code>Sprint قصير:
+├── إضافة ميزات صغيرة
+├── إصلاح الأخطاء
+└── تحسينات الأداء
+
+Sprint طويل:
+├── هيكل معمار جديد
+├── ميزات رئيسية
+└── تطوير نظام جديد
+</code></pre>
+<hr>
+<table>
+<thead>
+<tr>
+<th>المكون</th>
+<th>النوع</th>
+<th>الوظيفة</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>index.html</td>
+<td>Frontend</td>
+<td>الهيكل</td>
+</tr>
+<tr>
+<td>script.js</td>
+<td>Frontend</td>
+<td>المنطق</td>
+</tr>
+<tr>
+<td>style.css</td>
+<td>Frontend</td>
+<td>التنسيق</td>
+</tr>
+<tr>
+<td>manifest.json</td>
+<td>Data</td>
+<td>البيانات الوصفية</td>
+</tr>
+<tr>
+<td>generate-manifest.js</td>
+<td>Build</td>
+<td>إنشاء البيانات</td>
+</tr>
+<tr>
+<td>AI-Augmented-Vault</td>
+<td>Content</td>
+<td>المحتوى</td>
+</tr>
+<tr>
+<td>build_vault.py</td>
+<td>Utility</td>
+<td>الأدوات</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>للمزيد من التفاصيل، راجع:</strong></p>
+<ul>
+<li><code>folder-structure.md</code> - تفاصيل البنية</li>
+<li><code>data-flow.md</code> - تفاصيل تدفق البيانات</li>
+<li><code>technical-specifications.md</code> - المواصفات التقنية</li>
+</ul>
+<hr>
+<p><strong>آخر تحديث</strong>: 30 أبريل 2026</p>
+
+                    </div>
+
+                    
+                </article>
+            </main>
+
+            <!-- Right Sidebar Navigation -->
+            <aside class="sidebar-nav" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h3>Navigation</h3>
+                    <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar">×</button>
+                </div>
+                <nav class="nav-tree" id="nav-tree">
+                    <!-- Populated by JavaScript -->
+                    <div class="nav-loading">Loading navigation...</div>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Sidebar overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/nav-tree.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script>
+        // Initialize navigation tree for this page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = '/arabic-documentation/architecture/system-architecture.html';
+            initializeNavTree(currentPath);
+            initializeSearch();
+        });
+    </script>
+</body>
+</html>

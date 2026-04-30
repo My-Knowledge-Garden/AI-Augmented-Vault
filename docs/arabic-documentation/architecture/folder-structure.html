@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder Structure | AI-Augmented Documentation</title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">AI-Augmented Vault</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="search-input" class="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <!-- Left sidebar (breadcrumb/mobile nav) -->
+            <nav class="breadcrumb-nav">
+                <ul class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+<li><a href="/arabic-documentation/index.html">Arabic Documentation</a></li>
+<li><a href="/arabic-documentation/architecture/index.html">Architecture</a></li>
+<li class="current">Folder Structure</li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <article class="content-article">
+                    <header class="article-header">
+                        <h1>Folder Structure</h1>
+                        
+                        <div class="article-meta">
+                            <span class="date"></span>
+                            
+                            <div class="tags">
+                                
+                                <span class="tag"></span>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </header>
+
+                    
+
+                    <div class="content-body">
+                        <p>يشرح هذا الملف بالتفصيل كيف ينظّم المشروع الملفات والمجلدات.</p>
+<hr>
+<pre><code>AI-Augmented-Vault/  (الجذر الرئيسي للمشروع)
+│
+├── 📄 ملفات التكوين والمشروع
+│   ├── package.json              (معلومات المشروع والمكتبات)
+│   ├── package-lock.json         (قفل إصدارات المكتبات)
+│   ├── .gitignore               (ملفات لا تُرفع على Git)
+│   └── README.md                (الملف الأساسي للشرح)
+│
+├── 📄 ملفات الواجهة (Frontend)
+│   ├── index.html               (الصفحة الرئيسية)
+│   ├── script.js                (المنطق والتفاعل)
+│   └── style.css                (التنسيق والألوان)
+│
+├── 📄 ملفات البيانات والأدوات
+│   ├── manifest.json            (قاموس المحتوى - مُنشأ تلقائياً)
+│   ├── generate-manifest.js     (أداة إنشاء البيانات الوصفية)
+│   ├── build_vault.py           (أداة بناء القبو)
+│   └── categories.md            (قائمة الفئات)
+│
+├── 📁 المحتوى الرئيسي
+│   └── AI-Augmented-Vault/      (مجلد المحتوى الأساسي)
+│       ├── 1-creative-production/
+│       ├── 2-radical-discourse/
+│       ├── 3-practical-tech/
+│       └── 4-knowledge-management/
+│
+├── 📁 المكتبات (تُنشأ تلقائياً)
+│   └── node_modules/            (مكتبات Node.js)
+│
+└── 📁 التوثيق الإضافي
+    └── arabic-documentation/    (هذا المجلد!)
+</code></pre>
+<hr>
+<p><strong>الموقع:</strong> جذر المشروع</p>
+<p><strong>الوظيفة:</strong> </p>
+<ul>
+<li>تحديد معلومات المشروع</li>
+<li>إدارة المكتبات والمتعلقات</li>
+<li>تعريف الأوامر المتاحة</li>
+</ul>
+<p><strong>المحتوى:</strong></p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;ai-augmented_second_brain&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;مشروع قبو الذكاء الاصطناعي المعزز&quot;,
+  &quot;main&quot;: &quot;generate-manifest.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;gray-matter&quot;: &quot;^4.0.3&quot;
+  }
+}
+</code></pre>
+<p><strong>الموقع:</strong> جذر المشروع</p>
+<p><strong>الوظيفة:</strong></p>
+<ul>
+<li>الصفحة الرئيسية</li>
+<li>الواجهة التفاعلية</li>
+<li>نقطة البداية للمستخدم</li>
+</ul>
+<p><strong>المكونات:</strong></p>
+<ul>
+<li><code>&lt;head&gt;</code>: المعلومات الأساسية والربط مع CSS</li>
+<li><code>&lt;body&gt;</code>: محتوى الواجهة الرئيسية</li>
+<li>الربط مع <code>script.js</code></li>
+</ul>
+<p><strong>الموقع:</strong> جذر المشروع</p>
+<p><strong>الوظيفة:</strong></p>
+<ul>
+<li>منطق الواجهة التفاعلية</li>
+<li>تحميل البيانات من manifest.json</li>
+<li>معالجة أحداث المستخدم</li>
+</ul>
+<p><strong>المكونات الرئيسية:</strong></p>
+<pre><code class="language-javascript">// تحميل البيانات
+function loadManifest() { }
+
+// عرض المحتوى
+function displayContent() { }
+
+// البحث والتصفية
+function searchContent() { }
+
+// معالجة الأحداث
+document.addEventListener(&#39;DOMContentLoaded&#39;, init);
+</code></pre>
+<p><strong>الموقع:</strong> جذر المشروع</p>
+<p><strong>الوظيفة:</strong></p>
+<ul>
+<li>تنسيق الواجهة</li>
+<li>الألوان والخطوط</li>
+<li>دعم الاتجاه RTL (العربية)</li>
+</ul>
+<p><strong>المقاطع الرئيسية:</strong></p>
+<pre><code class="language-css">/* متغيرات CSS */
+:root { --primary-color: ...; }
+
+/* تنسيق HTML */
+body { direction: rtl; }
+
+/* المكونات */
+.header { }
+.sidebar { }
+.content { }
+</code></pre>
+<p><strong>الموقع:</strong> جذر المشروع</p>
+<p><strong>الوظيفة:</strong></p>
+<ul>
+<li>مسح جميع ملفات .md</li>
+<li>استخراج البيانات الوصفية (Front Matter)</li>
+<li>إنشاء manifest.json</li>
+</ul>
+<p><strong>الخطوات:</strong></p>
+<pre><code class="language-javascript">1. البحث عن ملفات .md
+2. قراءة Front Matter
+3. التحقق من الحقول المطلوبة
+4. إنشاء JSON
+5. حفظ manifest.json
+</code></pre>
+<p><strong>الموقع:</strong> جذر المشروع</p>
+<p><strong>الوظيفة:</strong></p>
+<ul>
+<li>أداة Python لبناء وصيانة القبو</li>
+<li>معالجة متقدمة للملفات</li>
+</ul>
+<p><strong>الأوامر المتاحة:</strong></p>
+<pre><code class="language-bash">python build_vault.py --help
+python build_vault.py --build
+python build_vault.py --clean
+</code></pre>
+<hr>
+<pre><code>AI-Augmented-Vault/
+│
+├── 1-creative-production/       (الإنتاج الإبداعي)
+├── 2-radical-discourse/         (الخطاب الجذري)
+├── 3-practical-tech/            (الحلول التقنية)
+└── 4-knowledge-management/      (إدارة المعرفة)
+</code></pre>
+<pre><code>1-creative-production/
+│
+├── audio-generation/            (توليد الصوت)
+│   ├── ai-music/
+│   │   └── ai-music.md          (الموسيقى المولدة بالذكاء الاصطناعي)
+│   └── songwriting/
+│       └── songwriting.md        (الكتابة الغنائية)
+│
+└── visual-arts/                 (الفنون البصرية)
+    ├── 3d-design/
+    │   └── 3d-design.md          (التصميم ثلاثي الأبعاد)
+    └── video-creation/
+        └── video-creation.md     (إنشاء الفيديو)
+</code></pre>
+<pre><code>2-radical-discourse/
+│
+├── analytical-writing/          (الكتابة التحليلية)
+│   ├── political-economic-critique/
+│   │   └── political-economic-critique.md
+│   └── religious-analysis/
+│       └── religious-analysis.md
+│
+└── philosophical-framework/     (الإطار الفلسفي)
+    ├── radical-perspectives/
+    │   └── radical-perspectives.md
+    └── realistic-philosophy/
+        └── realistic-philosophy.md
+</code></pre>
+<pre><code>3-practical-tech/
+│
+├── maintenance/                 (الصيانة والإصلاح)
+│   ├── a-simple-way-to-structure-under_Home-Appliance-Fixes.md
+│   ├── hardware-repair/
+│   │   └── hardware-repair.md
+│   └── home-repairs/
+│       └── home-repairs.md
+│
+└── software-building/           (تطوير البرمجيات)
+    ├── ai-development/
+    │   └── ai-development.md
+    ├── automation-scripts/
+    │   └── automation-scripts.md
+    └── simple-web-pages/
+        └── simple-web-pages.md
+</code></pre>
+<pre><code>4-knowledge-management/
+│
+├── experimental-infrastructure/ (البنية التجريبية)
+│   ├── knowledge-tree/
+│   │   └── knowledge-tree.md
+│   └── second-brain/
+│       └── second-brain.md
+│
+└── information-synthesis/       (تجميع المعلومات)
+    └── trial-error-structuring/
+        └── trial-error-structuring.md
+</code></pre>
+<hr>
+<pre><code class="language-markdown">---
+title: عنوان الملف
+description: وصف قصير
+category: 1-creative-production
+tags: [tag1, tag2]
+public: true
+author: اسم المؤلف
+date: 2026-04-30
+---
+
+# محتوى الملف
+
+## القسم الأول
+نصك هنا...
+
+## القسم الثاني
+مزيد من النصوص...
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>الحقل</th>
+<th>النوع</th>
+<th>الوصف</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>نص</td>
+<td>العنوان الرئيسي</td>
+</tr>
+<tr>
+<td>description</td>
+<td>نص</td>
+<td>وصف قصير</td>
+</tr>
+<tr>
+<td>category</td>
+<td>نص</td>
+<td>الفئة (1-4)</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>مصفوفة</td>
+<td>وسوم مفتاحية</td>
+</tr>
+<tr>
+<td>public</td>
+<td>منطقي</td>
+<td>نشر أو خاص</td>
+</tr>
+<tr>
+<td>author</td>
+<td>نص</td>
+<td>اسم المؤلف</td>
+</tr>
+<tr>
+<td>date</td>
+<td>تاريخ</td>
+<td>تاريخ الإنشاء</td>
+</tr>
+</tbody></table>
+<hr>
+<pre><code>node_modules/
+│
+└── المكتبات المثبتة
+    ├── gray-matter/             (المكتبة الرئيسية)
+    ├── dependencies/            (متعلقات gray-matter)
+    └── ...
+</code></pre>
+<ul>
+<li><strong>لا تعدّل</strong> الملفات في هذا المجلد</li>
+<li><strong>لا تنسخ</strong> هذا المجلد في Git</li>
+<li><strong>أعد التثبيت</strong> بـ <code>npm install</code> عند الحاجة</li>
+</ul>
+<hr>
+<pre><code># لا تُرفع على Git
+node_modules/
+.env
+*.log
+.DS_Store
+dist/
+build/
+</code></pre>
+<ul>
+<li>حفظ المجلدات الكبيرة من الرفع</li>
+<li>حماية البيانات الحساسة</li>
+<li>تنظيف المستودع</li>
+</ul>
+<hr>
+<p><strong>جذر المشروع</strong> (ينشأ بعد تشغيل <code>generate-manifest.js</code>)</p>
+<pre><code class="language-json">{
+  &quot;generated&quot;: &quot;2026-04-30T10:30:00Z&quot;,
+  &quot;totalFiles&quot;: 25,
+  &quot;categories&quot;: {
+    &quot;1-creative-production&quot;: 7,
+    &quot;2-radical-discourse&quot;: 7,
+    &quot;3-practical-tech&quot;: 9,
+    &quot;4-knowledge-management&quot;: 6
+  },
+  &quot;content&quot;: [
+    {
+      &quot;id&quot;: &quot;unique-id&quot;,
+      &quot;title&quot;: &quot;...&quot;,
+      &quot;filePath&quot;: &quot;...&quot;,
+      ...
+    }
+  ]
+}
+</code></pre>
+<hr>
+<pre><code>arabic-documentation/           (هذا المجلد!)
+│
+├── overview/                   (نظرة عامة)
+├── setup-installation/         (إعداد وتثبيت)
+├── architecture/               (العمارة والبنية)
+├── creative-production/        (الإنتاج الإبداعي)
+├── radical-discourse/          (الخطاب الجذري)
+├── practical-tech/             (الحلول التقنية)
+├── knowledge-management/       (إدارة المعرفة)
+├── guides/                     (أدلة ونصائح)
+└── glossary-and-references/    (مسرد ومراجع)
+</code></pre>
+<ul>
+<li>توثيق شامل باللغة العربية</li>
+<li>سهل الوصول والتصفح</li>
+<li>منظم وواضح</li>
+</ul>
+<hr>
+<p><strong>المجلدات:</strong></p>
+<ul>
+<li>صيغة: <code>name-like-this</code> (params-case)</li>
+<li>مثال: <code>creative-production</code>, <code>radical-discourse</code></li>
+</ul>
+<p><strong>الملفات:</strong></p>
+<ul>
+<li>صيغة: <code>file-name.md</code> (params-case)</li>
+<li>مثال: <code>ai-music.md</code>, <code>political-economic-critique.md</code></li>
+</ul>
+<p>✅ <code>ai-music.md</code><br>✅ <code>songwriting-guide.md</code><br>✅ <code>political-economic-critique.md</code></p>
+<p>❌ <code>AiMusic.md</code> (PascalCase)<br>❌ <code>ai_music.md</code> (snake_case)<br>❌ <code>AI MUSIC.md</code> (مسافات)</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th>الملف</th>
+<th>الموقع</th>
+<th>النوع</th>
+<th>الوظيفة</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>index.html</td>
+<td>جذر</td>
+<td>Frontend</td>
+<td>الصفحة الرئيسية</td>
+</tr>
+<tr>
+<td>script.js</td>
+<td>جذر</td>
+<td>Frontend</td>
+<td>المنطق</td>
+</tr>
+<tr>
+<td>style.css</td>
+<td>جذر</td>
+<td>Frontend</td>
+<td>التنسيق</td>
+</tr>
+<tr>
+<td>package.json</td>
+<td>جذر</td>
+<td>Config</td>
+<td>المشروع</td>
+</tr>
+<tr>
+<td>generate-manifest.js</td>
+<td>جذر</td>
+<td>Build</td>
+<td>إنشاء البيانات</td>
+</tr>
+<tr>
+<td>manifest.json</td>
+<td>جذر</td>
+<td>Data</td>
+<td>البيانات الوصفية</td>
+</tr>
+<tr>
+<td>build_vault.py</td>
+<td>جذر</td>
+<td>Build</td>
+<td>أداة البناء</td>
+</tr>
+</tbody></table>
+<hr>
+<pre><code>☐ وجود جميع ملفات الجذر
+☐ وجود مجلد AI-Augmented-Vault/
+☐ وجود الفئات الأربع
+☐ وجود ملفات .md في كل مجلد
+☐ وجود Front Matter في كل ملف
+☐ عدم وجود أخطاء في paths
+☐ صحة تسمية الملفات والمجلدات
+☐ وجود manifest.json بعد التنفيذ
+</code></pre>
+<hr>
+<p><strong>للمزيد من التفاصيل:</strong></p>
+<ul>
+<li> - العمارة العامة</li>
+<li> - تدفق البيانات</li>
+<li> - المواصفات التقنية</li>
+</ul>
+<hr>
+<p><strong>آخر تحديث</strong>: 30 أبريل 2026</p>
+
+                    </div>
+
+                    
+                </article>
+            </main>
+
+            <!-- Right Sidebar Navigation -->
+            <aside class="sidebar-nav" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h3>Navigation</h3>
+                    <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar">×</button>
+                </div>
+                <nav class="nav-tree" id="nav-tree">
+                    <!-- Populated by JavaScript -->
+                    <div class="nav-loading">Loading navigation...</div>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Sidebar overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/nav-tree.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script>
+        // Initialize navigation tree for this page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = '/arabic-documentation/architecture/folder-structure.html';
+            initializeNavTree(currentPath);
+            initializeSearch();
+        });
+    </script>
+</body>
+</html>

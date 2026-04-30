@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | AI-Augmented Documentation</title>
+    <meta name="description" content="{{description}}">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">AI-Augmented Vault</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="search-input" class="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <!-- Left sidebar (breadcrumb/mobile nav) -->
+            <nav class="breadcrumb-nav">
+                <ul class="breadcrumb">
+                    {{breadcrumb}}
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <article class="content-article">
+                    <header class="article-header">
+                        <h1>{{title}}</h1>
+                        {{#if metadata.date}}
+                        <div class="article-meta">
+                            <span class="date">{{formatDate metadata.date}}</span>
+                            {{#if metadata.tags}}
+                            <div class="tags">
+                                {{#each metadata.tags}}
+                                <span class="tag">{{this}}</span>
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        </div>
+                        {{/if}}
+                    </header>
+
+                    {{#if toc}}
+                    <aside class="toc-container">
+                        {{{toc}}}
+                    </aside>
+                    {{/if}}
+
+                    <div class="content-body">
+                        {{{html}}}
+                    </div>
+
+                    {{#if relatedLinks}}
+                    <section class="related-section">
+                        <h2>Related Pages</h2>
+                        <ul class="related-links">
+                            {{#each relatedLinks}}
+                            <li><a href="{{this.url}}">{{this.title}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}}
+                </article>
+            </main>
+
+            <!-- Right Sidebar Navigation -->
+            <aside class="sidebar-nav" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h3>Navigation</h3>
+                    <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar">×</button>
+                </div>
+                <nav class="nav-tree" id="nav-tree">
+                    <!-- Populated by JavaScript -->
+                    <div class="nav-loading">Loading navigation...</div>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Sidebar overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/nav-tree.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script>
+        // Initialize navigation tree for this page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = '{{currentPath}}';
+            initializeNavTree(currentPath);
+            initializeSearch();
+        });
+    </script>
+</body>
+</html>

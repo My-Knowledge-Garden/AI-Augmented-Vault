@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Specifications | AI-Augmented Documentation</title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">AI-Augmented Vault</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="search-input" class="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <!-- Left sidebar (breadcrumb/mobile nav) -->
+            <nav class="breadcrumb-nav">
+                <ul class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+<li><a href="/arabic-documentation/index.html">Arabic Documentation</a></li>
+<li><a href="/arabic-documentation/architecture/index.html">Architecture</a></li>
+<li class="current">Technical Specifications</li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <article class="content-article">
+                    <header class="article-header">
+                        <h1>Technical Specifications</h1>
+                        
+                        <div class="article-meta">
+                            <span class="date"></span>
+                            
+                            <div class="tags">
+                                
+                                <span class="tag"></span>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </header>
+
+                    
+
+                    <div class="content-body">
+                        <p>هذا الملف يحتوي على المواصفات التقنية الدقيقة.</p>
+<hr>
+<pre><code>OS:
+├─ Windows 10+ (x64)
+├─ macOS 10.13+ (Intel/Apple Silicon)
+└─ Linux (أي توزيعة حديثة)
+
+CPU:
+├─ الحد الأدنى: Intel i5 / AMD Ryzen 5
+├─ الموصى به: Intel i7 / AMD Ryzen 7
+└─ مثالي: Intel i9 / AMD Ryzen 9
+
+RAM:
+├─ الحد الأدنى: 4 GB
+├─ الموصى به: 8 GB
+└─ مثالي: 16 GB+
+
+Storage:
+├─ للمشروع الأساسي: 500 MB
+├─ مع node_modules: 2 GB
+└─ مع البيانات الكاملة: 5-10 GB
+</code></pre>
+<pre><code>المتصفحات المدعومة:
+├─ Chrome 90+
+├─ Firefox 88+
+├─ Safari 14+
+└─ Edge 90+
+
+ميزات مطلوبة:
+├─ JavaScript ES6+
+├─ localStorage API
+├─ Fetch API
+├─ CSS Grid &amp; Flexbox
+└─ Unicode &amp; RTL Support
+</code></pre>
+<hr>
+<pre><code>الحد الأدنى: Node.js 12 LTS
+الموصى به: Node.js 16 LTS أو 18+
+الأحدث المختبر: Node.js 20 LTS
+
+npm:
+الحد الأدنى: 6.0
+الموصى به: 7.0+
+الأحدث المختبر: 9.0+
+</code></pre>
+<pre><code class="language-json">{
+  &quot;gray-matter&quot;: &quot;^4.0.3&quot;,
+  &quot;dependencies&quot;: {
+    &quot;is-plainobject&quot;: &quot;^5.0.0&quot;,
+    &quot;js-yaml&quot;: &quot;^4.1.0&quot;,
+    &quot;toml&quot;: &quot;^3.0.0&quot;,
+    &quot;strip-bom-string&quot;: &quot;^1.0.0&quot;
+  }
+}
+</code></pre>
+<pre><code>المكتبة: gray-matter
+الإصدار: 4.0.3
+الوظيفة: استخراج YAML Front Matter من Markdown
+الترخيص: MIT
+الحجم: ~40 KB (بدون المتعلقات)
+</code></pre>
+<hr>
+<pre><code class="language-yaml">---
+title: عنوان الملف           # نص، مطلوب
+description: وصف قصير      # نص، مطلوب
+category: 1-creative-production # نص، مطلوب
+tags: [tag1, tag2, tag3]   # مصفوفة، مطلوب
+public: true               # boolean، مطلوب
+author: اسم المؤلف         # نص، اختياري
+date: 2026-04-30          # ISO 8601، اختياري
+updated: 2026-04-30       # ISO 8601، اختياري
+difficulty: intermediate   # easy/intermediate/hard، اختياري
+duration: 5                # دقائق القراءة، اختياري
+---
+</code></pre>
+<pre><code>1-creative-production       (الإنتاج الإبداعي)
+2-radical-discourse         (الخطاب الجذري)
+3-practical-tech            (الحلول التقنية)
+4-knowledge-management      (إدارة المعرفة)
+</code></pre>
+<pre><code>Creative: [AI, music, video, design, 3d, art]
+Discourse: [analysis, philosophy, politics, religion]
+Tech: [programming, automation, hardware, software]
+Knowledge: [learning, management, system, structure]
+General: [tutorial, guide, reference, case-study]
+Level: [beginner, intermediate, advanced]
+</code></pre>
+<pre><code>Size:
+├─ الحد الأدنى: 100 كلمة
+├─ الحد الموصى به: 500-3000 كلمة
+└─ الحد الأقصى: لا حد (لكن &gt;10,000 قد يكون بطيء)
+
+Characters:
+├─ العنوان: 5-100 حرف
+├─ الوصف: 20-500 حرف
+└─ المحتوى: بدون حد
+
+Encoding:
+├─ UTF-8 (مطلوب)
+├─ مع BOM (يدعمه النظام تلقائياً)
+└─ Line endings: LF (موصى به)
+</code></pre>
+<hr>
+<pre><code class="language-json">{
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;2026-04-30T10:30:00Z&quot;,
+  &quot;generatedBy&quot;: &quot;generate-manifest.js&quot;,
+  &quot;metadata&quot;: {
+    &quot;totalFiles&quot;: 25,
+    &quot;totalCategories&quot;: 4,
+    &quot;totalWords&quot;: 150000,
+    &quot;lastModified&quot;: &quot;2026-04-30&quot;
+  },
+  &quot;categories&quot;: {
+    &quot;1-creative-production&quot;: {
+      &quot;count&quot;: 7,
+      &quot;description&quot;: &quot;الإنتاج الإبداعي&quot;
+    },
+    ...
+  },
+  &quot;content&quot;: [
+    { ... }
+  ]
+}
+</code></pre>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;unique-identifier&quot;,
+  &quot;title&quot;: &quot;عنوان الملف&quot;,
+  &quot;description&quot;: &quot;وصف قصير&quot;,
+  &quot;category&quot;: &quot;1-creative-production&quot;,
+  &quot;tags&quot;: [&quot;tag1&quot;, &quot;tag2&quot;],
+  &quot;public&quot;: true,
+  &quot;author&quot;: &quot;اسم المؤلف&quot;,
+  &quot;date&quot;: &quot;2026-04-30&quot;,
+  &quot;updated&quot;: &quot;2026-04-30&quot;,
+  &quot;filePath&quot;: &quot;1-creative-production/audio-generation/ai-music/ai-music.md&quot;,
+  &quot;relativePath&quot;: &quot;AI-Augmented-Vault/1-creative-production/...&quot;,
+  &quot;wordCount&quot;: 2500,
+  &quot;readingTime&quot;: 10,
+  &quot;difficulty&quot;: &quot;intermediate&quot;
+}
+</code></pre>
+<pre><code>حجم الملف:
+├─ مع 25 ملف: ~50-100 KB
+├─ مع 100 ملف: ~200-400 KB
+└─ مع 1000 ملف: ~2-4 MB
+
+سرعة التحميل:
+├─ في Gzip: يقل بـ 70-80%
+├─ وقت المعالجة: &lt;100ms للملفات العادية
+└─ وقت البحث: &lt;50ms للاستعلامات البسيطة
+</code></pre>
+<hr>
+<pre><code>DOCTYPE: HTML5
+Encoding: UTF-8
+Language: ar (العربية)
+Direction: rtl (من اليمين لليسار)
+</code></pre>
+<pre><code>CSS Version: CSS3
+Direction: rtl support
+Layouts:
+├─ Flexbox (مدعوم)
+├─ Grid (مدعوم)
+└─ Responsive (مدعوم)
+
+Colors:
+├─ RGB/HEX
+├─ CSS Variables (Custom Properties)
+└─ Dark mode (اختياري)
+
+Fonts:
+├─ Supported: serif, sans-serif, monospace
+├─ Arabic: مدعوم كاملاً
+└─ Unicode: مدعوم كاملاً
+</code></pre>
+<pre><code>ECMAScript: ES6+
+Syntax:
+├─ const/let (بدلاً من var)
+├─ Arrow functions
+├─ Template literals
+├─ Fetch API
+└─ Async/Await
+
+Browser APIs:
+├─ DOM Manipulation
+├─ localStorage
+├─ Fetch API
+└─ Event Listeners
+</code></pre>
+<hr>
+<pre><code>Page Load:
+├─ First Contentful Paint (FCP): &lt; 1s
+├─ Largest Contentful Paint (LCP): &lt; 2.5s
+└─ Cumulative Layout Shift (CLS): &lt; 0.1
+
+Interactions:
+├─ Time to Interactive (TTI): &lt; 3.8s
+├─ First Input Delay (FID): &lt; 100ms
+└─ Search Response: &lt; 100ms
+
+File Sizes:
+├─ HTML: &lt; 50 KB
+├─ CSS: &lt; 30 KB
+├─ JavaScript: &lt; 50 KB
+├─ manifest.json: &lt; 500 KB (عادة &lt; 100 KB)
+└─ Total: &lt; 200 KB (مضغوط)
+</code></pre>
+<pre><code>Performance: 90+
+Accessibility: 90+
+Best Practices: 90+
+SEO: 90+
+</code></pre>
+<hr>
+<pre><code>HTTPS: موصى به بشدة
+CSP (Content Security Policy): موصى به
+CORS: محدود للنطاقات الموثوقة
+XSS Protection: تفعيل كامل
+</code></pre>
+<pre><code>Sensitive Data:
+├─ بدون كلمات مرور
+├─ بدون رموز الوصول
+├─ بدون معلومات شخصية
+└─ بدون بيانات مالية
+
+Encryption:
+├─ عند النقل: HTTPS/TLS
+├─ عند الراحة: ملفات عادية (UTF-8)
+└─ في الذاكرة: localStorage متشفر (متصفح)
+</code></pre>
+<hr>
+<pre><code class="language-javascript">// تحميل البيانات
+GET /manifest.json
+
+// قراءة ملف Markdown
+GET /AI-Augmented-Vault/path/to/file.md
+
+// عمليات البحث (محلياً)
+search(query: string): Array&lt;Content&gt;
+</code></pre>
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;Article&quot;,
+  &quot;headline&quot;: &quot;عنوان المقالة&quot;,
+  &quot;author&quot;: {
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;name&quot;: &quot;اسم المؤلف&quot;
+  },
+  &quot;datePublished&quot;: &quot;2026-04-30&quot;
+}
+</code></pre>
+<hr>
+<pre><code class="language-sql">Table: content
+├── id: VARCHAR(255) PRIMARY KEY
+├── title: VARCHAR(255)
+├── description: TEXT
+├── category: VARCHAR(100)
+├── tags: JSON
+├── public: BOOLEAN
+├── author: VARCHAR(255)
+├── date: TIMESTAMP
+├── filePath: VARCHAR(500)
+└── metadata: JSON
+
+Table: categories
+├── id: VARCHAR(100) PRIMARY KEY
+├── name: VARCHAR(255)
+├── description: TEXT
+└── priority: INTEGER
+
+Table: users (اختياري)
+├── id: VARCHAR(255) PRIMARY KEY
+├── username: VARCHAR(255)
+├── email: VARCHAR(255)
+└── role: ENUM(&#39;admin&#39;, &#39;editor&#39;, &#39;viewer&#39;)
+</code></pre>
+<hr>
+<pre><code>Server Requirements:
+├─ Web Server: Apache / Nginx / Node.js
+├─ PHP: ليس مطلوب
+├─ Database: ليس مطلوب (محلياً)
+├─ Language Support: JavaScript + Node.js
+└─ SSL/TLS: موصى به
+
+Deployment Options:
+├─ GitHub Pages (مجاني)
+├─ Netlify (مجاني)
+├─ Vercel (مجاني)
+├─ AWS (مدفوع)
+├─ DigitalOcean (مدفوع)
+└─ أي web hosting
+</code></pre>
+<pre><code>Trigger: git push
+├─ Run Tests
+├─ Generate Manifest
+├─ Build Assets
+├─ Minify Files
+├─ Deploy to Server
+└─ Notify Success
+</code></pre>
+<hr>
+<pre><code>Frequency: يومي / أسبوعي / شهري
+Format: ZIP / TAR.GZ
+Retention: 30 أيام
+Location: محلي + سحابي
+</code></pre>
+<pre><code>Recovery Time Objective (RTO): &lt; 1 ساعة
+Recovery Point Objective (RPO): &lt; 24 ساعة
+</code></pre>
+<hr>
+<pre><code>W3C HTML5: Compliant
+W3C CSS3: Compliant
+WCAG 2.1 AA: Compliant (هدف)
+WAI-ARIA: Supported
+</code></pre>
+<pre><code>UTF-8 Encoding: ✓
+RTL Support: ✓
+Arabic Language: ✓
+Bidirectional Text: ✓
+</code></pre>
+<hr>
+<table>
+<thead>
+<tr>
+<th>الفئة</th>
+<th>الحد الأدنى</th>
+<th>الموصى به</th>
+<th>الأمثل</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RAM</td>
+<td>4 GB</td>
+<td>8 GB</td>
+<td>16 GB</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>i5</td>
+<td>i7</td>
+<td>i9</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>12 LTS</td>
+<td>16+</td>
+<td>20 LTS</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>Chrome 90</td>
+<td>أحدث</td>
+<td>أحدث</td>
+</tr>
+<tr>
+<td>حجم Manifest</td>
+<td>-</td>
+<td>&lt;500 KB</td>
+<td>&lt;100 KB</td>
+</tr>
+<tr>
+<td>وقت التحميل</td>
+<td>-</td>
+<td>&lt;2s</td>
+<td>&lt;1s</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>للمزيد:</strong></p>
+<ul>
+<li> - العمارة</li>
+<li> - البنية</li>
+<li> - تدفق البيانات</li>
+</ul>
+<hr>
+<p><strong>آخر تحديث</strong>: 30 أبريل 2026</p>
+
+                    </div>
+
+                    
+                </article>
+            </main>
+
+            <!-- Right Sidebar Navigation -->
+            <aside class="sidebar-nav" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h3>Navigation</h3>
+                    <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar">×</button>
+                </div>
+                <nav class="nav-tree" id="nav-tree">
+                    <!-- Populated by JavaScript -->
+                    <div class="nav-loading">Loading navigation...</div>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Sidebar overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/nav-tree.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script>
+        // Initialize navigation tree for this page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = '/arabic-documentation/architecture/technical-specifications.html';
+            initializeNavTree(currentPath);
+            initializeSearch();
+        });
+    </script>
+</body>
+</html>

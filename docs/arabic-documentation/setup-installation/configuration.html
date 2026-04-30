@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration | AI-Augmented Documentation</title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">AI-Augmented Vault</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="search-input" class="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <!-- Left sidebar (breadcrumb/mobile nav) -->
+            <nav class="breadcrumb-nav">
+                <ul class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+<li><a href="/arabic-documentation/index.html">Arabic Documentation</a></li>
+<li><a href="/arabic-documentation/setup-installation/index.html">Setup Installation</a></li>
+<li class="current">Configuration</li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <article class="content-article">
+                    <header class="article-header">
+                        <h1>Configuration</h1>
+                        
+                        <div class="article-meta">
+                            <span class="date"></span>
+                            
+                            <div class="tags">
+                                
+                                <span class="tag"></span>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </header>
+
+                    
+
+                    <div class="content-body">
+                        <p>هذا الملف يشرح كيفية تخصيص وإعادة تكوين المشروع حسب احتياجاتك.</p>
+<hr>
+<p>الملف الرئيسي للإعدادات:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;ai-augmented_second_brain&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;مشروع قبو الذكاء الاصطناعي المعزز&quot;,
+  &quot;main&quot;: &quot;generate-manifest.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  }
+}
+</code></pre>
+<p>لتخصيص معلومات المشروع:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;اسم-مشروعك&quot;,
+  &quot;version&quot;: &quot;2.0.0&quot;,
+  &quot;description&quot;: &quot;وصف مشروعك&quot;,
+  &quot;author&quot;: &quot;اسمك&quot;,
+  &quot;license&quot;: &quot;MIT&quot;
+}
+</code></pre>
+<hr>
+<p>الملف الذي ينشئ <code>manifest.json</code>:</p>
+<p><strong>الإعدادات المهمة:</strong></p>
+<pre><code class="language-javascript">// 1. تغيير عمق البحث
+// الافتراضي: 4 مستويات
+const MAX_DEPTH = 4;
+
+// 2. تحديد المجلدات المستبعدة
+const EXCLUDED_FOLDERS = [&#39;node_modules&#39;, &#39;.git&#39;, &#39;archive&#39;];
+
+// 3. تغيير متطلبات البيانات الوصفية
+// مطلوب: public: true و جميع الحقول الإجبارية
+const REQUIRED_FIELDS = [&#39;title&#39;, &#39;description&#39;, &#39;category&#39;, &#39;public&#39;];
+</code></pre>
+<p>يمكنك إضافة معالجات خاصة للملفات:</p>
+<pre><code class="language-javascript">// معالجة خاصة لملفات معينة
+if (file.endsWith(&#39;special.md&#39;)) {
+  // معالجة خاصة
+}
+</code></pre>
+<hr>
+<p>الملف الرئيسي للواجهة:</p>
+<pre><code class="language-html">&lt;!-- تغيير العنوان --&gt;
+&lt;title&gt;اسم مشروعك&lt;/title&gt;
+
+&lt;!-- تغيير الألوان والمظهر --&gt;
+&lt;!-- عدّل في style.css --&gt;
+</code></pre>
+<pre><code class="language-css">/* الألوان الرئيسية */
+:root {
+  --primary-color: #007bff;      /* اللون الأساسي */
+  --secondary-color: #6c757d;    /* اللون الثانوي */
+  --success-color: #28a745;      /* لون النجاح */
+  --danger-color: #dc3545;       /* لون التحذير */
+}
+
+/* تخصيص الخطوط */
+body {
+  font-family: &#39;Arabic Font Name&#39;, Arial, sans-serif;
+  font-size: 16px;
+  direction: rtl;  /* للعربية */
+}
+</code></pre>
+<pre><code class="language-html">&lt;!-- في index.html --&gt;
+&lt;div class=&quot;logo&quot;&gt;
+  &lt;img src=&quot;logo.png&quot; alt=&quot;شعار مشروعي&quot;&gt;
+  &lt;h1&gt;اسم مشروعي&lt;/h1&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<p>كل ملف Markdown يجب أن يحتوي على:</p>
+<pre><code class="language-markdown">---
+title: عنوان الملف
+description: وصف قصير
+category: اسم الفئة
+tags: [tag1, tag2]
+public: true
+author: اسم المؤلف
+date: 2026-04-30
+---
+
+محتوى الملف هنا...
+</code></pre>
+<p>تحديد الفئات المسموحة:</p>
+<pre><code>1-creative-production      (الإنتاج الإبداعي)
+2-radical-discourse        (الخطاب الجذري)
+3-practical-tech           (الحلول التقنية)
+4-knowledge-management     (إدارة المعرفة)
+</code></pre>
+<p>استخدم وسوم معيارية:</p>
+<pre><code>[AI]              (الذكاء الاصطناعي)
+[tutorial]        (دليل تعليمي)
+[guide]           (دليل)
+[reference]       (مرجع)
+[case-study]      (دراسة حالة)
+[advanced]        (متقدم)
+[beginner]        (مبتدئ)
+</code></pre>
+<hr>
+<pre><code class="language-javascript">// في script.js
+const CACHE_ENABLED = true;      // تفعيل التخزين المؤقت
+const LAZY_LOAD = true;           // التحميل الكسول
+const COMPRESSION = true;         // ضغط البيانات
+</code></pre>
+<pre><code class="language-bash"># فحص الملفات
+npm run lint
+
+# اختبار المشروع
+npm run test
+
+# بناء المشروع
+npm run build
+</code></pre>
+<hr>
+<pre><code># في .gitignore
+node_modules/
+.env
+*.log
+secrets/
+build/
+dist/
+</code></pre>
+<pre><code>public: true       (متاح للجميع)
+public: false      (خاص)
+access: admin      (فقط المسؤول)
+access: team       (فريق معين)
+</code></pre>
+<hr>
+<pre><code class="language-html">&lt;!-- في index.html --&gt;
+&lt;html lang=&quot;ar&quot; dir=&quot;rtl&quot;&gt;
+  &lt;!-- محتوى عربي من اليمين لليسار --&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-javascript">const LANGUAGES = {
+  ar: &#39;العربية&#39;,
+  en: &#39;English&#39;,
+  fr: &#39;Français&#39;,
+  de: &#39;Deutsch&#39;
+};
+</code></pre>
+<pre><code class="language-json">// translations/ar.json
+{
+  &quot;home&quot;: &quot;الرئيسية&quot;,
+  &quot;about&quot;: &quot;حول&quot;,
+  &quot;contact&quot;: &quot;اتصل بنا&quot;
+}
+</code></pre>
+<hr>
+<pre><code class="language-bash"># سكريبت للنسخ الاحتياطية
+#!/bin/bash
+BACKUP_DATE=$(date +%Y%m%d_%H%M%S)
+cp -r AI-Augmented-Vault &quot;backup_$BACKUP_DATE&quot;
+</code></pre>
+<pre><code class="language-javascript">// التخزين المحلي (localStorage)
+localStorage.setItem(&#39;settings&#39;, JSON.stringify(config));
+
+// التخزين السحابي (اختياري)
+// Google Drive, Dropbox, GitHub
+</code></pre>
+<hr>
+<pre><code class="language-bash"># نمط التطوير
+npm run dev
+
+# مع مراقبة التغييرات
+npm run dev:watch
+</code></pre>
+<pre><code class="language-bash"># بناء للإنتاج
+npm run build
+
+# تشغيل على خادم
+npm run start
+</code></pre>
+<hr>
+<pre><code class="language-bash"># Python
+python -m http.server 8000
+
+# Node.js
+http-server -p 8000
+</code></pre>
+<p><strong>GitHub Pages:</strong></p>
+<pre><code class="language-bash">npm run deploy
+# ينشر على username.github.io/project
+</code></pre>
+<p><strong>Netlify:</strong></p>
+<pre><code class="language-bash"># اربط مشروعك مع Netlify
+# سيتم النشر التلقائي عند كل تحديث
+</code></pre>
+<p><strong>AWS, Heroku, إلخ:</strong><br>اتبع التعليمات الخاصة بكل خدمة</p>
+<hr>
+<pre><code class="language-json">{
+  &quot;project&quot;: {
+    &quot;name&quot;: &quot;قبو الذكاء الاصطناعي&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;language&quot;: &quot;ar&quot;
+  },
+  &quot;ui&quot;: {
+    &quot;theme&quot;: &quot;dark&quot;,
+    &quot;direction&quot;: &quot;rtl&quot;
+  },
+  &quot;performance&quot;: {
+    &quot;cache&quot;: true,
+    &quot;lazyLoad&quot;: true,
+    &quot;compression&quot;: true
+  },
+  &quot;security&quot;: {
+    &quot;https&quot;: true,
+    &quot;cors&quot;: [&quot;https://example.com&quot;]
+  }
+}
+</code></pre>
+<pre><code># لا تشارك هذا الملف!
+API_KEY=your-secret-key
+DB_CONNECTION=your-connection-string
+DEBUG=true
+</code></pre>
+<hr>
+<p>إذا عدّلت الكثير وأردت العودة:</p>
+<pre><code class="language-bash"># استعادة من Git
+git checkout -- .
+
+# أو إعادة تثبيت كاملة
+rm -rf node_modules
+npm install
+</code></pre>
+<hr>
+<pre><code>☐ تم تخصيص معلومات package.json
+☐ تم ضبط ألوان style.css
+☐ تم تعيين اللغة إلى العربية (rtl)
+☐ تم إعداد categories.md
+☐ تم تكوين generate-manifest.js
+☐ تم اختبار المشروع محلياً
+☐ تم عمل نسخة احتياطية
+☐ تم التحقق من الأداء
+</code></pre>
+<hr>
+<ol>
+<li><strong>تطبيق الإعدادات</strong>: اختر الإعدادات التي تهمك</li>
+<li><strong>الاختبار</strong>: تأكد من أن كل شيء يعمل</li>
+<li><strong>النشر</strong>: انشر مشروعك (اختياري)</li>
+<li><strong>الصيانة</strong>: حافظ على التحديثات منتظمة</li>
+</ol>
+<hr>
+<p><strong>تلميح:</strong> احفظ نسختك من الإعدادات الأصلية قبل التعديل!</p>
+<hr>
+<p><strong>آخر تحديث</strong>: 30 أبريل 2026</p>
+
+                    </div>
+
+                    
+                </article>
+            </main>
+
+            <!-- Right Sidebar Navigation -->
+            <aside class="sidebar-nav" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h3>Navigation</h3>
+                    <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar">×</button>
+                </div>
+                <nav class="nav-tree" id="nav-tree">
+                    <!-- Populated by JavaScript -->
+                    <div class="nav-loading">Loading navigation...</div>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Sidebar overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/nav-tree.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script>
+        // Initialize navigation tree for this page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = '/arabic-documentation/setup-installation/configuration.html';
+            initializeNavTree(currentPath);
+            initializeSearch();
+        });
+    </script>
+</body>
+</html>

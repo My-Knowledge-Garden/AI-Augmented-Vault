@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Guide | AI-Augmented Documentation</title>
+    <meta name="description" content="">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h1 class="logo">AI-Augmented Vault</h1>
+                </div>
+                <div class="search-container">
+                    <input type="search" id="search-input" class="search-input" placeholder="Search documentation..." aria-label="Search">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <!-- Left sidebar (breadcrumb/mobile nav) -->
+            <nav class="breadcrumb-nav">
+                <ul class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+<li><a href="/arabic-documentation/index.html">Arabic Documentation</a></li>
+<li><a href="/arabic-documentation/setup-installation/index.html">Setup Installation</a></li>
+<li class="current">Installation Guide</li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <article class="content-article">
+                    <header class="article-header">
+                        <h1>Installation Guide</h1>
+                        
+                        <div class="article-meta">
+                            <span class="date"></span>
+                            
+                            <div class="tags">
+                                
+                                <span class="tag"></span>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </header>
+
+                    
+
+                    <div class="content-body">
+                        <p>هذا الدليل يساعدك خطوة بخطوة لتثبيت المشروع بنجاح على نظامك.</p>
+<hr>
+<p>أولاً، تأكد من توفر جميع المتطلبات:</p>
+<ul>
+<li>نظام تشغيل محدث (انظر <code>requirements.md</code>)</li>
+<li>متصفح ويب حديث</li>
+<li>محرر نصوص (يفضل VS Code)</li>
+</ul>
+<p>افتح Terminal/Command Prompt وتحقق:</p>
+<p><strong>على Windows:</strong></p>
+<pre><code class="language-cmd">node --version
+npm --version
+</code></pre>
+<p><strong>على macOS/Linux:</strong></p>
+<pre><code class="language-bash">node --version
+npm --version
+</code></pre>
+<p>يجب أن ترى رقم نسخة مثل <code>v14.0.0</code> أو أحدث.</p>
+<p>إذا لم تكن مثبتاً، انزل Node.js من: </p>
+<pre><code class="language-bash">git --version
+</code></pre>
+<p>إذا لم تكن مثبتاً، انزل Git من: </p>
+<hr>
+<p>اختر إحدى الطرق التالية:</p>
+<p>فتح Terminal/Command Prompt في المجلد الذي تريد تثبيت المشروع فيه:</p>
+<pre><code class="language-bash"># انسخ المشروع
+git clone https://github.com/My-Knowledge-Garden/AI-Augmented-Vault.git
+
+# انتقل إلى مجلد المشروع
+cd AI-Augmented-Vault
+</code></pre>
+<p><strong>الفوائد:</strong></p>
+<ul>
+<li>✅ تحديثات سهلة مستقبلاً (<code>git pull</code>)</li>
+<li>✅ تتبع التغييرات</li>
+<li>✅ المرونة في الإصدارات</li>
+</ul>
+<ol>
+<li>انتقل إلى: </li>
+<li>انقر على <strong>Code</strong> ثم <strong>Download ZIP</strong></li>
+<li>استخرج الملف في مجلد من اختيارك</li>
+<li>افتح Terminal/Command Prompt في المجلد المستخرج</li>
+</ol>
+<pre><code class="language-bash">cd AI-Augmented-Vault
+</code></pre>
+<p><strong>الملاحظة:</strong> لن تحصل على تحديثات تلقائية</p>
+<hr>
+<p>من داخل مجلد <code>AI-Augmented-Vault</code>:</p>
+<pre><code class="language-bash"># تثبيت جميع المكتبات المطلوبة
+npm install
+</code></pre>
+<p>سيستغرق هذا بضع دقائق. ستظهر رسائل مختلفة، وفي النهاية ستكون جاهزاً.</p>
+<p><strong>ماذا يحدث:</strong></p>
+<ul>
+<li>تنزيل المكتبة <code>gray-matter</code> (لقراءة Markdown)</li>
+<li>إنشاء مجلد <code>node_modules/</code></li>
+<li>تحديث ملف <code>package-lock.json</code></li>
+</ul>
+<pre><code class="language-bash"># تحقق من أن gray-matter مثبت
+npm list gray-matter
+</code></pre>
+<p>يجب أن ترى: <code>gray-matter@4.0.3</code> أو نسخة أحدث</p>
+<hr>
+<pre><code class="language-bash"># شغّل سكريبت إنشاء البيانات الوصفية
+node generate-manifest.js
+</code></pre>
+<p><strong>النتيجة المتوقعة:</strong></p>
+<ul>
+<li>إنشاء ملف <code>manifest.json</code> جديد</li>
+<li>ستظهر رسالة نجاح في Terminal</li>
+</ul>
+<ol>
+<li>انتقل إلى مجلد المشروع</li>
+<li>افتح الملف <code>index.html</code> بالنقر المزدوج عليه</li>
+<li>أو افتحه يدويًا في المتصفح بـ <code>Ctrl+O</code> (Windows/Linux) أو <code>Cmd+O</code> (Mac)</li>
+</ol>
+<p><strong>يجب أن ترى:</strong></p>
+<ul>
+<li>صفحة ويب تفاعلية</li>
+<li>قائمة بالمحتوى والفئات</li>
+<li>واجهة للبحث والملاحة</li>
+</ul>
+<hr>
+<p>إذا أردت مساهمة أو تعديلات:</p>
+<pre><code class="language-bash"># أنشئ فرع جديد (Branch)
+git checkout -b my-changes
+
+# أو انسخ المشروع لحسابك على GitHub:
+# 1. اذهب إلى https://github.com/My-Knowledge-Garden/AI-Augmented-Vault
+# 2. انقر على &quot;Fork&quot; في الأعلى
+# 3. استنسخ نسختك الخاصة
+</code></pre>
+<p>إذا كنت تستخدم VS Code:</p>
+<ol>
+<li><p>افتح المشروع:</p>
+<pre><code class="language-bash">code .
+</code></pre>
+</li>
+<li><p>ثبّت المميزات الموصى بها:</p>
+<ul>
+<li>Markdown All in One</li>
+<li>Prettier - Code formatter</li>
+<li>Better Comments</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>الآن أنت جاهز! 🎉</p>
+<pre><code>AI-Augmented-Vault/
+├── index.html          ← افتح هذا في المتصفح
+├── script.js           ← منطق الواجهة
+├── style.css           ← تنسيق الواجهة
+├── package.json        ← قائمة المكتبات
+├── categories.md       ← قائمة المحتويات
+├── generate-manifest.js ← أداة إنشاء البيانات الوصفية
+├── build_vault.py      ← أداة بناء القبو
+├── manifest.json       ← البيانات الوصفية المولدة
+└── AI-Augmented-Vault/ ← مجلد المحتوى الرئيسي
+    ├── 1-creative-production/
+    ├── 2-radical-discourse/
+    ├── 3-practical-tech/
+    └── 4-knowledge-management/
+</code></pre>
+<ol>
+<li>اقرأ <code>categories.md</code> لفهم البنية</li>
+<li>افتح <code>index.html</code> لاستكشاف المحتوى</li>
+<li>اقرأ <code>README.md</code> للمزيد من التفاصيل</li>
+<li>ابدأ باستكشاف الفئات التي تهمك</li>
+</ol>
+<hr>
+<pre><code class="language-bash"># تشغيل سريع لمولد البيانات الوصفية
+npm start  # (إذا تم تكوينه)
+
+# أو مباشرة:
+node generate-manifest.js
+</code></pre>
+<p>إذا كان لديك نسخة من Git:</p>
+<pre><code class="language-bash"># احصل على آخر التحديثات
+git pull origin main
+
+# ثم أعد تثبيت المكتبات (في حالة التغييرات)
+npm install
+</code></pre>
+<p><strong>مشكلة: رسالة خطأ عند <code>npm install</code></strong></p>
+<ul>
+<li>جرّب: <code>npm cache clean --force</code> ثم <code>npm install</code> مجدداً</li>
+</ul>
+<p><strong>مشكلة: <code>manifest.json</code> لا ينُشأ</strong></p>
+<ul>
+<li>تحقق: <code>node generate-manifest.js</code> مجدداً</li>
+<li>تحقق من أذونات الكتابة في المجلد</li>
+</ul>
+<p><strong>مشكلة: <code>index.html</code> لا يفتح</strong></p>
+<ul>
+<li>تأكد من فتح الملف بـ <code>file://</code> في المتصفح</li>
+<li>جرّب متصفح مختلف</li>
+</ul>
+<hr>
+<p>إذا أردت تشغيل خادم محلي:</p>
+<pre><code class="language-bash"># Python 3
+python -m http.server 8000
+
+# ثم افتح في المتصفح:
+# http://localhost:8000
+</code></pre>
+<pre><code class="language-bash"># ثبّت http-server عالمياً
+npm install -g http-server
+
+# شغّله
+http-server
+
+# ثم افتح في المتصفح:
+# http://localhost:8080
+</code></pre>
+<hr>
+<p>إذا واجهت مشاكل، حاول هذا:</p>
+<pre><code class="language-bash"># حذف كل شيء وابدأ من جديد
+rm -rf node_modules package-lock.json
+
+# إعادة التثبيت من الصفر
+npm install
+
+# التحقق
+npm list
+</code></pre>
+<hr>
+<pre><code>☐ تم استنساخ أو تنزيل المشروع
+☐ تم تثبيت npm install
+☐ تم التحقق من npm list gray-matter
+☐ تم تشغيل generate-manifest.js بنجاح
+☐ تم فتح index.html في المتصفح
+☐ تظهر الواجهة والمحتوى بشكل صحيح
+☐ يمكنك التنقل بين الفئات
+☐ لا توجد رسائل خطأ في console المتصفح
+</code></pre>
+<hr>
+<p>بعد التثبيت الناجح:</p>
+<ol>
+<li>✅ اقرأ <code>quick-start.md</code> للبدء السريع</li>
+<li>✅ استكشف <code>categories.md</code></li>
+<li>✅ اقرأ <code>best-practices.md</code> للنصائح</li>
+<li>✅ ابدأ باستكشاف المحتوى الذي يهمك</li>
+</ol>
+<hr>
+<p>إذا واجهت مشاكل:</p>
+<ol>
+<li><strong>تحقق من</strong> <code>troubleshooting.md</code></li>
+<li><strong>راجع</strong> <code>requirements.md</code></li>
+<li><strong>ابحث عن المشكلة</strong> على GitHub Issues</li>
+<li><strong>تواصل مع المجتمع</strong> عبر GitHub</li>
+</ol>
+<hr>
+<p><strong>تهانينا! تم التثبيت بنجاح! 🎉</strong></p>
+<hr>
+<p><strong>آخر تحديث</strong>: 30 أبريل 2026</p>
+
+                    </div>
+
+                    
+                </article>
+            </main>
+
+            <!-- Right Sidebar Navigation -->
+            <aside class="sidebar-nav" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h3>Navigation</h3>
+                    <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar">×</button>
+                </div>
+                <nav class="nav-tree" id="nav-tree">
+                    <!-- Populated by JavaScript -->
+                    <div class="nav-loading">Loading navigation...</div>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Sidebar overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/nav-tree.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script>
+        // Initialize navigation tree for this page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = '/arabic-documentation/setup-installation/installation-guide.html';
+            initializeNavTree(currentPath);
+            initializeSearch();
+        });
+    </script>
+</body>
+</html>

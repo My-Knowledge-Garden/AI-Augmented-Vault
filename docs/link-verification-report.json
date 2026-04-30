@@ -1,0 +1,578 @@
+{
+  "timestamp": "2026-04-30T20:49:26.569Z",
+  "statistics": {
+    "totalFiles": 46,
+    "totalLinks": 151,
+    "brokenLinks": 94,
+    "externalLinks": 0,
+    "verifiedLinks": 57,
+    "anchorLinks": 0
+  },
+  "brokenLinks": [
+    {
+      "file": "arabic-documentation/architecture/data-flow.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/architecture/data-flow.html",
+      "link": "/arabic-documentation/architecture/index.html",
+      "resolvedPath": "arabic-documentation/architecture/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/architecture/folder-structure.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/architecture/folder-structure.html",
+      "link": "/arabic-documentation/architecture/index.html",
+      "resolvedPath": "arabic-documentation/architecture/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/architecture/system-architecture.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/architecture/system-architecture.html",
+      "link": "/arabic-documentation/architecture/index.html",
+      "resolvedPath": "arabic-documentation/architecture/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/architecture/technical-specifications.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/architecture/technical-specifications.html",
+      "link": "/arabic-documentation/architecture/index.html",
+      "resolvedPath": "arabic-documentation/architecture/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/3d-design.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/3d-design.html",
+      "link": "/arabic-documentation/creative-production/index.html",
+      "resolvedPath": "arabic-documentation/creative-production/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/ai-music.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/ai-music.html",
+      "link": "/arabic-documentation/creative-production/index.html",
+      "resolvedPath": "arabic-documentation/creative-production/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/audio-generation.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/audio-generation.html",
+      "link": "/arabic-documentation/creative-production/index.html",
+      "resolvedPath": "arabic-documentation/creative-production/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/creative-overview.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/creative-overview.html",
+      "link": "/arabic-documentation/creative-production/index.html",
+      "resolvedPath": "arabic-documentation/creative-production/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/songwriting.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/songwriting.html",
+      "link": "/arabic-documentation/creative-production/index.html",
+      "resolvedPath": "arabic-documentation/creative-production/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/video-creation.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/video-creation.html",
+      "link": "/arabic-documentation/creative-production/index.html",
+      "resolvedPath": "arabic-documentation/creative-production/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/visual-arts.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/creative-production/visual-arts.html",
+      "link": "/arabic-documentation/creative-production/index.html",
+      "resolvedPath": "arabic-documentation/creative-production/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/glossary-and-references/glossary.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/glossary-and-references/glossary.html",
+      "link": "/arabic-documentation/glossary-and-references/index.html",
+      "resolvedPath": "arabic-documentation/glossary-and-references/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/glossary-and-references/references.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/glossary-and-references/references.html",
+      "link": "/arabic-documentation/glossary-and-references/index.html",
+      "resolvedPath": "arabic-documentation/glossary-and-references/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/guides/best-practices.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/guides/best-practices.html",
+      "link": "/arabic-documentation/guides/index.html",
+      "resolvedPath": "arabic-documentation/guides/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/guides/content-creation-guide.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/guides/content-creation-guide.html",
+      "link": "/arabic-documentation/guides/index.html",
+      "resolvedPath": "arabic-documentation/guides/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/guides/troubleshooting.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/guides/troubleshooting.html",
+      "link": "/arabic-documentation/guides/index.html",
+      "resolvedPath": "arabic-documentation/guides/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/guides/user-guide.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/guides/user-guide.html",
+      "link": "/arabic-documentation/guides/index.html",
+      "resolvedPath": "arabic-documentation/guides/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/experimental-infrastructure.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/experimental-infrastructure.html",
+      "link": "/arabic-documentation/knowledge-management/index.html",
+      "resolvedPath": "arabic-documentation/knowledge-management/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/information-synthesis.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/information-synthesis.html",
+      "link": "/arabic-documentation/knowledge-management/index.html",
+      "resolvedPath": "arabic-documentation/knowledge-management/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/knowledge-overview.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/knowledge-overview.html",
+      "link": "/arabic-documentation/knowledge-management/index.html",
+      "resolvedPath": "arabic-documentation/knowledge-management/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/knowledge-tree.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/knowledge-tree.html",
+      "link": "/arabic-documentation/knowledge-management/index.html",
+      "resolvedPath": "arabic-documentation/knowledge-management/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/second-brain.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/second-brain.html",
+      "link": "/arabic-documentation/knowledge-management/index.html",
+      "resolvedPath": "arabic-documentation/knowledge-management/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/trial-error-structuring.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/knowledge-management/trial-error-structuring.html",
+      "link": "/arabic-documentation/knowledge-management/index.html",
+      "resolvedPath": "arabic-documentation/knowledge-management/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/overview/project-overview.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/overview/project-overview.html",
+      "link": "/arabic-documentation/overview/index.html",
+      "resolvedPath": "arabic-documentation/overview/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/overview/quick-start.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/overview/quick-start.html",
+      "link": "/arabic-documentation/overview/index.html",
+      "resolvedPath": "arabic-documentation/overview/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/overview/table-of-contents.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/overview/table-of-contents.html",
+      "link": "/arabic-documentation/overview/index.html",
+      "resolvedPath": "arabic-documentation/overview/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/ai-development.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/ai-development.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/appliance-fixes.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/appliance-fixes.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/automation-scripts.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/automation-scripts.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/hardware-repair.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/hardware-repair.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/home-repairs.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/home-repairs.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/maintenance.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/maintenance.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/simple-web-pages.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/simple-web-pages.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/software-building.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/software-building.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/tech-overview.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/practical-tech/tech-overview.html",
+      "link": "/arabic-documentation/practical-tech/index.html",
+      "resolvedPath": "arabic-documentation/practical-tech/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/analytical-writing.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/analytical-writing.html",
+      "link": "/arabic-documentation/radical-discourse/index.html",
+      "resolvedPath": "arabic-documentation/radical-discourse/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/discourse-overview.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/discourse-overview.html",
+      "link": "/arabic-documentation/radical-discourse/index.html",
+      "resolvedPath": "arabic-documentation/radical-discourse/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/philosophical-framework.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/philosophical-framework.html",
+      "link": "/arabic-documentation/radical-discourse/index.html",
+      "resolvedPath": "arabic-documentation/radical-discourse/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/political-economic-critique.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/political-economic-critique.html",
+      "link": "/arabic-documentation/radical-discourse/index.html",
+      "resolvedPath": "arabic-documentation/radical-discourse/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/radical-perspectives.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/radical-perspectives.html",
+      "link": "/arabic-documentation/radical-discourse/index.html",
+      "resolvedPath": "arabic-documentation/radical-discourse/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/realistic-philosophy.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/realistic-philosophy.html",
+      "link": "/arabic-documentation/radical-discourse/index.html",
+      "resolvedPath": "arabic-documentation/radical-discourse/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/religious-analysis.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/radical-discourse/religious-analysis.html",
+      "link": "/arabic-documentation/radical-discourse/index.html",
+      "resolvedPath": "arabic-documentation/radical-discourse/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/setup-installation/configuration.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/setup-installation/configuration.html",
+      "link": "/arabic-documentation/setup-installation/index.html",
+      "resolvedPath": "arabic-documentation/setup-installation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/setup-installation/installation-guide.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/setup-installation/installation-guide.html",
+      "link": "/arabic-documentation/setup-installation/index.html",
+      "resolvedPath": "arabic-documentation/setup-installation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/setup-installation/requirements.html",
+      "link": "/arabic-documentation/index.html",
+      "resolvedPath": "arabic-documentation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "arabic-documentation/setup-installation/requirements.html",
+      "link": "/arabic-documentation/setup-installation/index.html",
+      "resolvedPath": "arabic-documentation/setup-installation/index.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "index.html",
+      "link": "/categories/creative-production.html",
+      "resolvedPath": "categories/creative-production.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "index.html",
+      "link": "/categories/radical-discourse.html",
+      "resolvedPath": "categories/radical-discourse.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "index.html",
+      "link": "/categories/practical-tech.html",
+      "resolvedPath": "categories/practical-tech.html",
+      "message": "Target not found"
+    },
+    {
+      "file": "index.html",
+      "link": "/categories/knowledge-management.html",
+      "resolvedPath": "categories/knowledge-management.html",
+      "message": "Target not found"
+    }
+  ],
+  "report": "File,Link,Resolved Path,Status\narabic-documentation/architecture/data-flow.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/architecture/data-flow.html,\"/arabic-documentation/architecture/index.html\",\"arabic-documentation/architecture/index.html\",\"Target not found\"\narabic-documentation/architecture/folder-structure.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/architecture/folder-structure.html,\"/arabic-documentation/architecture/index.html\",\"arabic-documentation/architecture/index.html\",\"Target not found\"\narabic-documentation/architecture/system-architecture.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/architecture/system-architecture.html,\"/arabic-documentation/architecture/index.html\",\"arabic-documentation/architecture/index.html\",\"Target not found\"\narabic-documentation/architecture/technical-specifications.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/architecture/technical-specifications.html,\"/arabic-documentation/architecture/index.html\",\"arabic-documentation/architecture/index.html\",\"Target not found\"\narabic-documentation/creative-production/3d-design.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/creative-production/3d-design.html,\"/arabic-documentation/creative-production/index.html\",\"arabic-documentation/creative-production/index.html\",\"Target not found\"\narabic-documentation/creative-production/ai-music.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/creative-production/ai-music.html,\"/arabic-documentation/creative-production/index.html\",\"arabic-documentation/creative-production/index.html\",\"Target not found\"\narabic-documentation/creative-production/audio-generation.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/creative-production/audio-generation.html,\"/arabic-documentation/creative-production/index.html\",\"arabic-documentation/creative-production/index.html\",\"Target not found\"\narabic-documentation/creative-production/creative-overview.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/creative-production/creative-overview.html,\"/arabic-documentation/creative-production/index.html\",\"arabic-documentation/creative-production/index.html\",\"Target not found\"\narabic-documentation/creative-production/songwriting.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/creative-production/songwriting.html,\"/arabic-documentation/creative-production/index.html\",\"arabic-documentation/creative-production/index.html\",\"Target not found\"\narabic-documentation/creative-production/video-creation.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/creative-production/video-creation.html,\"/arabic-documentation/creative-production/index.html\",\"arabic-documentation/creative-production/index.html\",\"Target not found\"\narabic-documentation/creative-production/visual-arts.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/creative-production/visual-arts.html,\"/arabic-documentation/creative-production/index.html\",\"arabic-documentation/creative-production/index.html\",\"Target not found\"\narabic-documentation/glossary-and-references/glossary.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/glossary-and-references/glossary.html,\"/arabic-documentation/glossary-and-references/index.html\",\"arabic-documentation/glossary-and-references/index.html\",\"Target not found\"\narabic-documentation/glossary-and-references/references.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/glossary-and-references/references.html,\"/arabic-documentation/glossary-and-references/index.html\",\"arabic-documentation/glossary-and-references/index.html\",\"Target not found\"\narabic-documentation/guides/best-practices.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/guides/best-practices.html,\"/arabic-documentation/guides/index.html\",\"arabic-documentation/guides/index.html\",\"Target not found\"\narabic-documentation/guides/content-creation-guide.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/guides/content-creation-guide.html,\"/arabic-documentation/guides/index.html\",\"arabic-documentation/guides/index.html\",\"Target not found\"\narabic-documentation/guides/troubleshooting.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/guides/troubleshooting.html,\"/arabic-documentation/guides/index.html\",\"arabic-documentation/guides/index.html\",\"Target not found\"\narabic-documentation/guides/user-guide.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/guides/user-guide.html,\"/arabic-documentation/guides/index.html\",\"arabic-documentation/guides/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/experimental-infrastructure.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/experimental-infrastructure.html,\"/arabic-documentation/knowledge-management/index.html\",\"arabic-documentation/knowledge-management/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/information-synthesis.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/information-synthesis.html,\"/arabic-documentation/knowledge-management/index.html\",\"arabic-documentation/knowledge-management/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/knowledge-overview.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/knowledge-overview.html,\"/arabic-documentation/knowledge-management/index.html\",\"arabic-documentation/knowledge-management/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/knowledge-tree.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/knowledge-tree.html,\"/arabic-documentation/knowledge-management/index.html\",\"arabic-documentation/knowledge-management/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/second-brain.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/second-brain.html,\"/arabic-documentation/knowledge-management/index.html\",\"arabic-documentation/knowledge-management/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/trial-error-structuring.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/knowledge-management/trial-error-structuring.html,\"/arabic-documentation/knowledge-management/index.html\",\"arabic-documentation/knowledge-management/index.html\",\"Target not found\"\narabic-documentation/overview/project-overview.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/overview/project-overview.html,\"/arabic-documentation/overview/index.html\",\"arabic-documentation/overview/index.html\",\"Target not found\"\narabic-documentation/overview/quick-start.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/overview/quick-start.html,\"/arabic-documentation/overview/index.html\",\"arabic-documentation/overview/index.html\",\"Target not found\"\narabic-documentation/overview/table-of-contents.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/overview/table-of-contents.html,\"/arabic-documentation/overview/index.html\",\"arabic-documentation/overview/index.html\",\"Target not found\"\narabic-documentation/practical-tech/ai-development.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/ai-development.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/practical-tech/appliance-fixes.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/appliance-fixes.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/practical-tech/automation-scripts.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/automation-scripts.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/practical-tech/hardware-repair.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/hardware-repair.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/practical-tech/home-repairs.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/home-repairs.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/practical-tech/maintenance.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/maintenance.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/practical-tech/simple-web-pages.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/simple-web-pages.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/practical-tech/software-building.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/software-building.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/practical-tech/tech-overview.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/practical-tech/tech-overview.html,\"/arabic-documentation/practical-tech/index.html\",\"arabic-documentation/practical-tech/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/analytical-writing.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/analytical-writing.html,\"/arabic-documentation/radical-discourse/index.html\",\"arabic-documentation/radical-discourse/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/discourse-overview.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/discourse-overview.html,\"/arabic-documentation/radical-discourse/index.html\",\"arabic-documentation/radical-discourse/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/philosophical-framework.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/philosophical-framework.html,\"/arabic-documentation/radical-discourse/index.html\",\"arabic-documentation/radical-discourse/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/political-economic-critique.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/political-economic-critique.html,\"/arabic-documentation/radical-discourse/index.html\",\"arabic-documentation/radical-discourse/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/radical-perspectives.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/radical-perspectives.html,\"/arabic-documentation/radical-discourse/index.html\",\"arabic-documentation/radical-discourse/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/realistic-philosophy.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/realistic-philosophy.html,\"/arabic-documentation/radical-discourse/index.html\",\"arabic-documentation/radical-discourse/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/religious-analysis.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/radical-discourse/religious-analysis.html,\"/arabic-documentation/radical-discourse/index.html\",\"arabic-documentation/radical-discourse/index.html\",\"Target not found\"\narabic-documentation/setup-installation/configuration.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/setup-installation/configuration.html,\"/arabic-documentation/setup-installation/index.html\",\"arabic-documentation/setup-installation/index.html\",\"Target not found\"\narabic-documentation/setup-installation/installation-guide.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/setup-installation/installation-guide.html,\"/arabic-documentation/setup-installation/index.html\",\"arabic-documentation/setup-installation/index.html\",\"Target not found\"\narabic-documentation/setup-installation/requirements.html,\"/arabic-documentation/index.html\",\"arabic-documentation/index.html\",\"Target not found\"\narabic-documentation/setup-installation/requirements.html,\"/arabic-documentation/setup-installation/index.html\",\"arabic-documentation/setup-installation/index.html\",\"Target not found\"\nindex.html,\"/categories/creative-production.html\",\"categories/creative-production.html\",\"Target not found\"\nindex.html,\"/categories/radical-discourse.html\",\"categories/radical-discourse.html\",\"Target not found\"\nindex.html,\"/categories/practical-tech.html\",\"categories/practical-tech.html\",\"Target not found\"\nindex.html,\"/categories/knowledge-management.html\",\"categories/knowledge-management.html\",\"Target not found\""
+}
