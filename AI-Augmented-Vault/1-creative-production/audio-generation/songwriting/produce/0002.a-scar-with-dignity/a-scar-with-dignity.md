@@ -1,5 +1,17 @@
 ---
-created: 2026-03-11
+title: A Scar With Dignity - Final (ندبة بكرامة)
+category: Audio Generation (توليد الصوت)
+parent: 0002. A Scar With Dignity (ندبة بكرامة)
+description: كلمات أغنية ندبة بكرامة - النسخة النهائية.
+tags:
+  - auto-generated
+  - creative-production
+  - darija
+  - final
+date: 2026-03-11
+progress: in-progress
+public: true
+status: active
 ---
 
 [Intro]

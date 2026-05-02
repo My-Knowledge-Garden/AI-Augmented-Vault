@@ -1,5 +1,17 @@
 ---
-created: 2026-03-11
+title: A Scar With Dignity - Draft v1 (ندبة بكرامة)
+category: Audio Generation (توليد الصوت)
+parent: 0002. A Scar With Dignity (ندبة بكرامة)
+description: مسودة أولى لكلمات أغنية ندبة بكرامة بالدارجة.
+tags:
+  - auto-generated
+  - creative-production
+  - darija
+  - draft
+date: 2026-03-11
+progress: in-progress
+public: true
+status: active
 ---
 
 ترى الحيات فسيحة مريحة

@@ -1,5 +1,16 @@
 ---
-created: 2026-03-11
+title: Wid - Love/Relationship (وِد)
+category: Audio Generation (توليد الصوت)
+parent: 0004. Wid (وِد)
+description: كلمات أغنية عن العلاقات والمودة.
+tags:
+  - auto-generated
+  - creative-production
+  - darija
+date: 2026-03-11
+progress: in-progress
+public: true
+status: active
 ---
 
 [Pre-Verse]  
