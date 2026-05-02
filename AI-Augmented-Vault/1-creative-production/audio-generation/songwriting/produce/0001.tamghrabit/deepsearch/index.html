@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خريطة طريق: مشروع أغنية الوحدة المغاربية</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Tajawal', sans-serif;
+        background-color: #f0f9ff;
+        color: #0f172a;
+    }
+    .chart-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 350px;
+        max-height: 400px;
+    }
+    @media (min-width: 768px) {
+        .chart-wrapper {
+            height: 400px;
+        }
+    }
+    .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .gradient-text {
+        background: linear-gradient(to right, #e11d48, #f59e0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
+</head>
+<body class="antialiased pb-20">
+
+<header class="bg-slate-900 text-white py-16 px-6 text-center shadow-xl border-b-4 border-amber-500 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOklEQVQoU2NkYGIwYKASYEQUZQQpQxGEY1NGEAUBk2AUZcRQAjMBSgKqk2AUhc1QUwTjU1Aeh8MQAwB7OwgV9oD/wQAAAABJRU5ErkJggg==')]"></div>
+    <div class="max-w-4xl mx-auto relative z-10">
+        <div class="text-6xl mb-4">🇲🇦 🤝 🎵</div>
+        <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">مشروع التناغم: <span class="gradient-text">الأمازيغ والعرب</span></h1>
+        <p class="text-xl md:text-2xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed">
+            خريطة طريق بيانية لإنشاء عمل فني موسيقي يفكك خطابات الكراهية، يبني على المشترك التاريخي، ويحتفي بالهوية المغربية المزدوجة والمتكاملة.
+        </p>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 grid grid-cols-1 gap-12">
+
+    <section class="glass-card rounded-2xl shadow-lg p-6 md:p-10 border-t-4 border-emerald-500">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">أولاً: تفكيك الرواية - ما يجمعنا أكثر مما يفرقنا</h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                لبناء أغنية ذات مصداقية، يجب أن تنطلق الكلمات من حقائق تاريخية واجتماعية. التشابك الثقافي في المغرب ليس مجرد تجاور، بل هو اندماج عميق. الدارجة المغربية نفسها هي نتاج لغوي مبني على قواعد ومفردات أمازيغية بقالب عربي. يوضح الرسم أدناه ركائز التداخل الثقافي التي يجب أن تسلط الأغنية الضوء عليها.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="chart-wrapper">
+                <canvas id="polarChart"></canvas>
+            </div>
+            <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+                <h3 class="text-xl font-bold text-emerald-800 mb-4">نقاط البحث لكتابة الكلمات (الأساس التاريخي):</h3>
+                <ul class="list-disc list-inside space-y-3 text-emerald-900 text-lg">
+                    <li><strong class="text-emerald-700">الاستعارة اللغوية:</strong> كلمات نستعملها يوميا أصلها أمازيغي (مش، ساروت، شرجم) للتعبير عن أن اللسان واحد.</li>
+                    <li><strong class="text-emerald-700">المصاهرة المتجذرة:</strong> التركيز على العائلات المختلطة حيث الجد أمازيغي والجدة عربية والعكس.</li>
+                    <li><strong class="text-emerald-700">تاريخ المقاومة المشترك:</strong> ذكر معارك شارك فيها الجميع جنباً إلى جنب ضد المستعمر.</li>
+                    <li><strong class="text-emerald-700">الدين والقيم:</strong> القيم الروحية المشتركة التي تتجاوز العرق وتوحد النظرة للحياة.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="glass-card rounded-2xl shadow-lg p-6 md:p-10 border-t-4 border-rose-500">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">ثانياً: جذور الصراع المفتعل وتطور الخطاب</h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                يجب أن تعترف الأغنية بواقعية بوجود أصوات نشاز، لكن مع تحجيمها وتبيان أنها ظاهرة حديثة مرتبطة بعصر الإنترنت والأجندات الإيديولوجية، وليست امتداداً لواقع مجتمعي حقيقي. يوضح الخط الزمني كيف تصاعد "الاستقطاب الرقمي" مقابل الاستقرار التاريخي للتلاحم المجتمعي.
+            </p>
+        </div>
+        <div class="chart-wrapper w-full max-w-4xl mx-auto h-[400px]">
+            <canvas id="lineChart"></canvas>
+        </div>
+        <div class="mt-6 text-center text-rose-700 bg-rose-50 p-4 rounded-lg font-bold">
+            رسالة الأغنية هنا: "العداوة في الشاشات، أما في الواقع فنحن خوت".
+        </div>
+    </section>
+
+    <section class="glass-card rounded-2xl shadow-lg p-6 md:p-10 border-t-4 border-amber-500">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">ثالثاً: الهيكل المعنوي لقصيدة الأغنية (الأعمدة الرئيسية)</h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                لتكون الأغنية مؤثرة وشاملة، يجب أن توازن بين عدة محاور عاطفية ومنطقية. هذا التوزيع المقترح للمواضيع يضمن عدم الوقوع في فخ العاطفة المفرطة غير الواقعية، ولا الانزلاق في نقاش أكاديمي جاف.
+            </p>
+        </div>
+        <div class="chart-wrapper w-full max-w-3xl mx-auto">
+            <canvas id="barChart"></canvas>
+        </div>
+    </section>
+
+    <section class="glass-card rounded-2xl shadow-lg p-6 md:p-10 border-t-4 border-blue-500">
+        <div class="mb-8 text-center">
+            <h2 class="text-3xl font-bold text-slate-800 mb-4">رابعاً: خريطة الدمج الموسيقي (المقترح الفني)</h2>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
+                الكلمات وحدها لا تكفي، التوزيع الموسيقي يجب أن يعكس التلاحم المادي. هذا المخطط يوضح كيفية دمج الآلات والإيقاعات لتجسيد الفكرة واقعياً.
+            </p>
+        </div>
+        
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-8">
+            
+            <div class="flex-1 bg-amber-50 border-2 border-amber-200 p-6 rounded-2xl text-center w-full shadow-sm relative">
+                <div class="text-5xl mb-3">🪕</div>
+                <h3 class="text-2xl font-bold text-amber-800 mb-2">الروح الأمازيغية</h3>
+                <p class="text-amber-700 font-medium">الرباب، لوتار، البندير</p>
+                <div class="mt-4 text-sm text-amber-600">إيقاعات أحواش وحيدوس لزرع الحيوية والأصالة</div>
+                <div class="hidden md:block absolute -left-8 top-1/2 transform -translate-y-1/2 text-4xl text-slate-300 z-10">➕</div>
+            </div>
+
+            <div class="flex-1 bg-sky-50 border-2 border-sky-200 p-6 rounded-2xl text-center w-full shadow-sm relative">
+                <div class="text-5xl mb-3">🎸</div>
+                <h3 class="text-2xl font-bold text-sky-800 mb-2">الروح العربية / الأندلسية</h3>
+                <p class="text-sky-700 font-medium">العود، الكمان، الدربوكة</p>
+                <div class="mt-4 text-sm text-sky-600">مقامات وإيقاعات الشعبي والغرناطي لإضافة العمق والشجن</div>
+                <div class="block md:hidden text-4xl text-slate-300 my-2">➕</div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-6">
+            <div class="text-4xl text-slate-300 mb-2">⬇️</div>
+            <div class="bg-gradient-to-r from-amber-500 to-sky-500 p-8 rounded-2xl text-white shadow-xl max-w-2xl mx-auto">
+                <div class="text-5xl mb-3">🎧</div>
+                <h3 class="text-3xl font-black mb-2">الأغنية الشاملة</h3>
+                <p class="text-lg text-white/90">توزيع موسيقي معاصر (مثلاً Afrobeats أو Pop) يدمج الآلات التقليدية بتناغم، مع غناء مزدوج (مقطع بالدارجة، مقطع بالأمازيغية، ولازمة مشتركة تمزج الكلمات).</p>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<script>
+    const wrapLabel = (label) => {
+        if (label.length <= 16) return label;
+        let words = label.split(' ');
+        let lines = [];
+        let currentLine = '';
+        for (let word of words) {
+            if ((currentLine + word).length > 16) {
+                if (currentLine) lines.push(currentLine.trim());
+                currentLine = word + ' ';
+            } else {
+                currentLine += word + ' ';
+            }
+        }
+        if (currentLine) lines.push(currentLine.trim());
+        return lines;
+    };
+
+    const commonTooltipConfig = {
+        callbacks: {
+            title: function(tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            }
+        }
+    };
+
+    Chart.defaults.font.family = "'Tajawal', sans-serif";
+    Chart.defaults.color = '#475569';
+    Chart.defaults.font.size = 14;
+
+    const ctxPolar = document.getElementById('polarChart').getContext('2d');
+    const polarLabels = [
+        "الاستعارة اللغوية والمفردات",
+        "المصاهرة والتداخل العائلي",
+        "الطبخ والعادات اليومية",
+        "الإيقاعات الموسيقية",
+        "التاريخ المشترك والمقاومة",
+        "القيم الدينية والروحية"
+    ].map(wrapLabel);
+
+    new Chart(ctxPolar, {
+        type: 'polarArea',
+        data: {
+            labels: polarLabels,
+            datasets: [{
+                label: 'درجة التداخل المجتمعي (تخيلي)',
+                data: [90, 85, 95, 80, 88, 100],
+                backgroundColor: [
+                    'rgba(16, 185, 129, 0.7)',
+                    'rgba(225, 29, 72, 0.7)',
+                    'rgba(245, 158, 11, 0.7)',
+                    'rgba(14, 165, 233, 0.7)',
+                    'rgba(139, 92, 246, 0.7)',
+                    'rgba(30, 58, 138, 0.7)'
+                ],
+                borderColor: '#ffffff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'right', rtl: true, labels: { font: { size: 12 } } },
+                tooltip: commonTooltipConfig
+            },
+            scales: {
+                r: {
+                    ticks: { display: false },
+                    grid: { color: 'rgba(0,0,0,0.05)' }
+                }
+            }
+        }
+    });
+
+    const ctxLine = document.getElementById('lineChart').getContext('2d');
+    const lineLabels = ["فترة ما قبل الاستعمار", "مرحلة مقاومة الاستعمار", "الاستقلال وبناء الدولة", "ظهور شبكات التواصل", "الوضع الحالي"].map(wrapLabel);
+    
+    new Chart(ctxLine, {
+        type: 'line',
+        data: {
+            labels: lineLabels,
+            datasets: [
+                {
+                    label: 'التلاحم الاجتماعي الفعلي',
+                    data: [90, 95, 85, 80, 85],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    borderWidth: 4,
+                    tension: 0.4,
+                    fill: true
+                },
+                {
+                    label: 'الاستقطاب والتعصب الافتراضي',
+                    data: [10, 5, 20, 70, 85],
+                    borderColor: '#e11d48',
+                    backgroundColor: 'transparent',
+                    borderWidth: 3,
+                    borderDash: [5, 5],
+                    tension: 0.4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'top', rtl: true },
+                tooltip: commonTooltipConfig
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    title: { display: true, text: 'مستوى الشدة (%)', font: { weight: 'bold' } }
+                },
+                x: {
+                    ticks: { maxRotation: 45, minRotation: 45 }
+                }
+            }
+        }
+    });
+
+    const ctxBar = document.getElementById('barChart').getContext('2d');
+    const barLabels = [
+        "رفض الإقصاء والتعصب",
+        "توضيح أهداف المتطرفين",
+        "الافتخار بالهوية المزدوجة",
+        "تثمين الاختلاف كقوة",
+        "دعوة للمستقبل والبناء"
+    ].map(wrapLabel);
+
+    new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+            labels: barLabels,
+            datasets: [{
+                label: 'أهمية المحور في الأغنية (من 10)',
+                data: [8, 6, 10, 9, 10],
+                backgroundColor: [
+                    '#f43f5e',
+                    '#8b5cf6',
+                    '#10b981',
+                    '#f59e0b',
+                    '#0ea5e9'
+                ],
+                borderRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: commonTooltipConfig
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 10,
+                    grid: { color: 'rgba(0,0,0,0.05)' }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { font: { weight: 'bold' } }
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -18,4 +18,5 @@ status: active
 
 ---
 ## Notes
+- Before to create any song read this [[songwriting-methodology]] first.
 - 
